@@ -14,3 +14,12 @@ button:focus,
 a:focus {
   outline: none;
 }
+.loading {
+  display: "flex";
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+.notLoading {
+  display: none;
+}

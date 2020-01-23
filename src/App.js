@@ -15,21 +15,7 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <h1
-        style={
-          isLoading
-            ? {
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                height: "80vh"
-              }
-            : { display: "none" }
-        }
-      >
-        Loading...
-      </h1>
-
+      <h1 className={isLoading ? "loading" : "notLoading"}>Loading...</h1>
       <Landing />
       <Projects />
       <Skew />
