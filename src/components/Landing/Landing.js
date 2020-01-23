@@ -27,9 +27,7 @@ const Landing=()=>{
                 <div id='landingContent'>
                     <h2>Hello world!</h2>
                     <p id='subHead'>I develop things for the web using state-of-the-art technologies.</p>
-                    
                     <br></br>
-
                     <p className='tech'>React.js</p>
                     <p className='tech'>ES6</p>
                     <p className='tech'>HTML5</p>

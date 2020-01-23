@@ -1,155 +1,151 @@
 @import "../../main";
-@keyframes grow{
-    0%{
-        transform: scale(0.1);
-        opacity: 0;
-    }
-    
-    100%{
-        transform: scale(1);
-        opacity: 1;
-    }
+@keyframes grow {
+  0% {
+    transform: scale(0.1);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
-@keyframes slideIn{
-    0%{
-        transform: translateX(-50vw);
-        opacity: 0;
-    }
-    100%{
-        transform: translateX(0vw);
-        opacity: 1;
-    }
+@keyframes slideIn {
+  0% {
+    transform: translateX(-50vw);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0vw);
+    opacity: 1;
+  }
 }
-#landing{
-    z-index: 0;
-    position: relative;
-    margin-top: -0.23em;
+#landing {
+  z-index: 0;
+  position: relative;
+  margin-top: -0.23em;
 }
-#heading{
-    animation: slideIn 1.4s;
-    position: relative;
-    font-size: 28px;
-    letter-spacing: -0.1em;
-    margin-top: 1em;
-    text-decoration: underline;
-    text-decoration-color: $color1;
+#heading {
+  animation: slideIn 1.4s;
+  position: relative;
+  font-size: 28px;
+  letter-spacing: -0.1em;
+  margin-top: 1em;
+  text-decoration: underline;
+  text-decoration-color: $color1;
+}
+#location {
+  animation: slideIn 1.4s;
+  display: inline-flex;
+  justify-content: $cen;
+  align-items: $cen;
+  padding-top: 0.5em;
+}
+#col1 {
+  background-color: #eeeeee;
+  width: 100vw;
+  min-height: 80vh;
+  display: flex;
+  justify-content: $cen;
+  align-items: $cen;
+  text-align: $cen;
+}
+#col1Content {
+  justify-content: $cen;
+  align-items: $cen;
+  text-align: $cen;
+}
+#portrait {
+  animation: slideIn 1.4s;
+  display: flex;
+  max-width: 300px;
+  border-radius: 100%;
+  border: solid 5px $color1;
+}
+#portrait:hover {
+  margin-top: -3px;
+  margin-bottom: 3px;
+  box-shadow: #30303060 0em 0.5em 1em 0.5em;
+}
+#col1Content {
+  padding: 0em 4em;
+  justify-content: $cen;
+  align-items: $cen;
+  text-align: $cen;
+}
+#nameWrap {
+  display: flex;
+  justify-content: $cen;
+}
+#col2 {
+  background-color: #eee;
+  width: 100vw;
+  display: flex;
+  align-items: $cen;
+  padding: 0em 2em;
+}
+#landingContent {
+  animation: grow 1.4s;
+  background-color: white;
+  border: solid 5px $color1;
+  border-radius: 10px;
+  padding: 2em;
+  position: relative;
+  margin: 0vh 7vw 5vh 7vw;
+}
+#landingContent > h2 {
+  color: $color1;
+  letter-spacing: -0.06em;
+}
+#likeBtn {
+  padding-top: 1em;
+}
+#subHead {
+  padding: 1em 0em;
+}
+.tech {
+  letter-spacing: -0.06em;
+  display: inline-flex;
+  border: solid 2px $color1;
+  padding: 0.3em 0.6em;
+  border-radius: 5px;
+  font-weight: 600;
+  margin-right: 0.5em;
+  margin-bottom: 0.5em;
+}
+.tech:hover {
+  background-color: #cccccc50;
 }
 
-#location{
-    animation: slideIn 1.4s;
-    display: inline-flex;
-    justify-content: $cen;
-    align-items: $cen;
-    padding-top: 0.5em;
-}
-#col1{
-
-    background-color: #eeeeee;
+@media screen and (min-width: 768px) {
+  #landing {
+    display: flex;
     width: 100vw;
-    min-height: 80vh;
-    display: flex;
-    justify-content: $cen;
-    align-items: $cen;
+  }
+  #col1 {
+    width: 50vw;
+  }
+  #col1Content {
     text-align: $cen;
-}
-#col1Content{
-    justify-content: $cen;
     align-items: $cen;
-    text-align: $cen;
-}
-#portrait{
-    animation: slideIn 1.4s;
-    display: flex;
-    max-width: 300px;
-    border-radius: 100%;
-    border: solid 5px $color1;
-}
-#portrait:hover{
-    margin-top: -3px;
-    margin-bottom: 3px;
-    box-shadow: #30303060 0em 0.5em 1em 0.5em;
-}
-#col1Content{
-    padding: 0em 4em;  
     justify-content: $cen;
-    align-items: $cen;
-    text-align: $cen;  
-}
-#nameWrap{
-    display: flex;
+  }
+  #col2 {
+    background: white;
+    width: 50vw;
     justify-content: $cen;
+    padding-left: 0;
+  }
+  #landingContent {
+    margin-right: 7vw;
+    position: absolute;
+    margin-left: -1.2em;
+  }
 }
-
-#col2{
-    background-color: #eee;
-    width: 100vw;
-    display: flex;
-    align-items: $cen;
-    padding: 0em 2em;
-}
-#landingContent{
-    animation: grow 1.4s;
-    background-color: white;
-    border: solid 5px $color1;
-    border-radius: 10px;
-    padding: 2em;
-    position: relative;
-    margin: 0vh 7vw 5vh 7vw;
-}
-#landingContent>h2{
-    color: $color1;
-    letter-spacing: -0.06em;
-}
-#likeBtn{
-    padding-top: 1em;
-}
-#subHead{
-    padding: 1em 0em;
-}
-.tech{
-    letter-spacing: -0.06em;
-    display: inline-flex;
-    border: solid 2px $color1;
-    padding: 0.3em 0.6em;
-    border-radius: 5px;
-    font-weight: 600;
-    margin-right: 0.5em;
-    margin-bottom: 0.5em;
-}
-.tech:hover{
-    background-color: #cccccc50;
-
-}
-
-@media screen and (min-width:768px){
-    #landing{
-        display: flex;
-        width: 100vw;
-    }
-    #col1{
-        width: 50vw;  
-    }
-    #col1Content{
-        text-align: $cen;
-        align-items: $cen;
-        justify-content: $cen;
-    }
-    #col2{
-        background:white;
-        width: 50vw;
-        justify-content: $cen;
-        padding-left: 0;
-    }
-    #landingContent{
-        margin-right: 7vw;
-        position: absolute;
-        margin-left: -1.2em;
-    }
-}
-@media screen and (min-width:1080px){
-    #landingContent{
-        margin-right: 7vw;
-        position: absolute;
-        margin-left: -4em;
-    }
+@media screen and (min-width: 1080px) {
+  #landingContent {
+    margin-right: 7vw;
+    position: absolute;
+    margin-left: -4em;
+  }
 }
