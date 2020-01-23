@@ -1,0 +1,111 @@
+@import "../../main";
+@keyframes bounce{
+    0%{
+        transform: translateY(0em);
+    }
+    50%{
+        transform: translateY(0.2em);
+    }
+    100%{
+        transform: translateY(0em);
+    }
+}
+@keyframes grow{
+    0%{
+        transform: scale(0.1);
+        opacity: 0;
+    }
+    
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+a{
+    cursor: pointer;
+}
+#projectSection{
+    background-color: $colorBG;
+    width: 100vw;
+}
+#projectsWrap{
+    background-color: $colorBG;
+    display: block;
+    padding: 0em 2em 0em 2em;
+    overflow-x: hidden;
+    width: 100vw;
+    content: contain;
+}
+#projectHeading{
+    animation: bounce 1.4s ease-in-out infinite;
+    text-align: center;
+    width: 100vw;
+    padding: 1em 2em 1em 2em;
+    letter-spacing: -0.1em;
+    color: $color1;
+    font-size: xx-large;
+}
+.projectCard{
+    padding: 2em 2em 2.6em 2em;
+    display: block;
+    text-align: left;
+    border-radius: 5px;
+    background-color: white;
+    min-height: 50vh;
+    min-width: 80vw;
+    margin: 0em 1em 2em 1em;
+    border-bottom: solid 3px #bebebe;
+    border-right: solid 3px #bebebe;
+}
+.num{
+    color: $color1;
+    font-weight: 700;
+    font-size: 20px;
+    padding-bottom: 0.3em;
+    
+}
+.projectTitle{
+    color: $color1;
+    letter-spacing: -0.06em;
+    padding-bottom: 1em;
+}
+.description{
+    padding: 1em 0em 2em 0em;
+}
+.sourceBtn{
+    background-color: rgba(0, 0, 0, 0);
+    border: $btnBorder;
+    border-radius: 5px;
+    padding: $btnPad;
+    color: $color1;
+    font-weight: 600;
+    width: 100%;
+}
+.sourceBtn:hover, .sourceBtn:focus{
+    background-color: #cccccc50;
+}
+.viewProjectBtn{
+    background-color: $color1;
+    border: $btnBorder;
+    border-radius: 5px;
+    padding: $btnPad;
+    color: white;
+    font-weight: 600;
+    width: 100%;
+}
+.disabled{
+    background-color: #ccc;
+    border: solid 2px #ccc;
+    cursor: auto;
+}
+
+@media screen and (min-width:768px){
+    #projectsWrap{
+        display: flex;
+    }
+    .projectCard{
+        background-color: white;
+        min-height: 50vh;
+        min-width: 28vw;
+    }
+}

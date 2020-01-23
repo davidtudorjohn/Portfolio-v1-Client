@@ -1,24 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
+import React, { useState, useEffect } from 'react';
+import Header from './components/Header/Header'
+import './App.css'
+import Landing from './components/Landing/Landing';
+import Projects from './components/Projects/Projects';
+import Skew from './components/Skew/Skew';
+import Footer from './components/Footer/Footer';
+import Form from './components/Form/Form';
 function App() {
+  const [isLoading, setIsLoading] = useState('true')
+
+  useEffect(()=>{
+    setIsLoading(()=>!isLoading)
+  },[])
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <Header />
+        <h1 style={isLoading ? {display:'flex', justifyContent:'center', alignItems:'center', height:'80vh'} : {display:'none'}}>Loading...</h1>
+
+        <Landing />
+        <Projects />
+        <Skew />
+        <Form />
+        <Footer />
+        
     </div>
   );
 }

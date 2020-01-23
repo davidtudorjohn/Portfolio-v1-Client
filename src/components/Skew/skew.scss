@@ -1,0 +1,30 @@
+@import "../../main";
+#skewWrap{
+    background-color: #eee;
+    background: linear-gradient(to right, blueviolet, $color1, blueviolet);
+    display: flex;
+    min-height: 90vh;
+    justify-content: $cen;
+    align-items: $cen;
+    transform: skew(0deg, -10deg);
+    margin-top: 20vh;
+    overflow-x: hidden;
+    margin-bottom: 20vh;
+    border-bottom: solid 10px #ccc;
+
+    h2{
+    padding: 1.4em;
+    border-top-right-radius: 14em;
+    border-bottom-right-radius: 25em;
+    border-top-left-radius: 18em;
+    border-bottom-left-radius: 4em;
+    border:solid 5px white;
+    border-bottom: solid 15px white;
+    font-size: 56px;
+    color: white;
+    transform: skew(0deg, 10deg);
+    }
+}
+hr{
+    border: solid 4px white;
+}
