@@ -10,7 +10,7 @@ import {
 import { like } from "../../actions";
 import { useDispatch, useSelector } from "react-redux";
 const Landing = () => {
-  // let [isLiked, setIsLiked] = useState(false)
+  // const [isLiked, setIsLiked] = useState(false);
   const isLiked = useSelector(state => state.isLiked);
   const dispatch = useDispatch();
   return (
@@ -49,7 +49,8 @@ const Landing = () => {
           <p className="tech">Github</p>
           <br></br>
           <button id="likeBtn" onClick={() => dispatch(like())}>
-            {/* onClick={()=>setIsLiked(isLiked= !isLiked)}> */}
+            {/* onClick={() => setIsLiked(!isLiked)}
+          > */}
             <FontAwesomeIcon
               icon={faHeart}
               id="faHeart"
