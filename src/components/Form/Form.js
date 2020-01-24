@@ -13,7 +13,7 @@ const Form = () => {
               type="text"
               name="name"
               autoComplete="off"
-              required="true"
+              required={true}
             />
             <label className="inputLabel">
               <span className="labelContent">Name</span>
@@ -25,7 +25,7 @@ const Form = () => {
               type="text/email"
               name="email"
               autoComplete="off"
-              required="true"
+              required={true}
             />
             <label className="inputLabel">
               <span className="labelContent">Email</span>
@@ -37,7 +37,7 @@ const Form = () => {
               type="password"
               name="password"
               autoComplete="new-password"
-              required="true"
+              required={true}
             />
             <label className="inputLabel">
               <span className="labelContent">Password</span>

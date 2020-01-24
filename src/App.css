@@ -15,11 +15,11 @@ a:focus {
   outline: none;
 }
 .loading {
-  display: "flex";
+  display: flex;
   justify-content: center;
   align-items: center;
   height: 80vh;
 }
-.notLoading {
+.loaded {
   display: none;
 }

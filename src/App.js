@@ -15,7 +15,7 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <h1 className={isLoading ? "loading" : "notLoading"}>Loading...</h1>
+      <h6 className={isLoading ? "loading" : "loaded"}>Loading...</h6>
       <Landing />
       <Projects />
       <Skew />
@@ -24,5 +24,4 @@ function App() {
     </div>
   );
 }
-
 export default App;

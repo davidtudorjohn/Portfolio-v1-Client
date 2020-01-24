@@ -22,7 +22,10 @@ const Projects = () => {
           <p className="tech">Sass</p>
           <p className="tech">Redux</p>
           <p className="description">A software engineer's portfolio</p>
-          <a className="sourceBtn" href="https://github.com/david-t-john">
+          <a
+            className="sourceBtn"
+            href="https://github.com/david-t-john/portfolio-v1"
+          >
             Source Code
           </a>
           <br></br>
