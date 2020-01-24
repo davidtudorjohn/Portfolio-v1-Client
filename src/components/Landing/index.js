@@ -2,11 +2,7 @@ import React, { useState } from "react";
 import "./landing.scss";
 import david from "./david.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faMapMarkerAlt,
-  faHeart,
-  faHeartBroken
-} from "@fortawesome/free-solid-svg-icons";
+import { faMapMarkerAlt, faHeart } from "@fortawesome/free-solid-svg-icons";
 import { like } from "../../actions";
 import { useDispatch, useSelector } from "react-redux";
 const Landing = () => {
@@ -33,7 +29,7 @@ const Landing = () => {
           <p id="subHead">
             I develop things for the web using state-of-the-art technologies.
           </p>
-          <br></br>
+          <br />
           <p className="tech">React.js</p>
           <p className="tech">ES6</p>
           <p className="tech">HTML5</p>
@@ -47,7 +43,7 @@ const Landing = () => {
           <p className="tech">Stripe</p>
           <p className="tech">Git</p>
           <p className="tech">Github</p>
-          <br></br>
+          <br />
           <button id="likeBtn" onClick={() => dispatch(like())}>
             {/* onClick={() => setIsLiked(!isLiked)}
           > */}
