@@ -40,6 +40,7 @@ const Landing = () => {
           <p className="tech">CSS3</p>
           <p className="tech">Sass</p>
           <p className="tech">Redux</p>
+          <p className="tech">Node.js</p>
           <p className="tech">Express.js</p>
           <p className="tech">MongoDB</p>
           <p className="tech">Wordpress</p>
