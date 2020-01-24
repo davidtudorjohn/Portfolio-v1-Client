@@ -10,6 +10,9 @@
   overflow: hidden;
   background-color: #eee;
 }
+a {
+  cursor: pointer;
+}
 .loading {
   display: flex;
   justify-content: center;
