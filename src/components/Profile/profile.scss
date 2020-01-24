@@ -1,0 +1,65 @@
+@import "../../main";
+@keyframes slideIn {
+  0% {
+    transform: translateX(-50vw);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0vw);
+    opacity: 1;
+  }
+}
+#heading {
+  animation: slideIn 1.4s;
+  position: relative;
+  font-size: 28px;
+  letter-spacing: -0.1em;
+  margin-top: 1em;
+  text-decoration: underline;
+  text-decoration-color: $color1;
+}
+#location {
+  animation: slideIn 1.4s;
+  display: inline-flex;
+  justify-content: $cen;
+  align-items: $cen;
+  padding-top: 0.5em;
+}
+#col1Content {
+  justify-content: $cen;
+  align-items: $cen;
+  text-align: $cen;
+}
+#portrait {
+  animation: slideIn 1.4s;
+  display: flex;
+  // margin-left: -4vw;
+  max-width: 300px;
+  border-radius: 100%;
+  border: solid 5px $color1;
+}
+#portrait:hover {
+  margin-top: -3px;
+  margin-bottom: 3px;
+  box-shadow: #30303060 0em 0.5em 1em 0.5em;
+}
+#faMapMarkerAlt {
+  color: #ccc;
+}
+#col1Content {
+  padding: 0em 4em;
+  justify-content: $cen;
+  align-items: $cen;
+  text-align: $cen;
+}
+#nameWrap {
+  display: flex;
+  justify-content: $cen;
+}
+@media screen and (min-width: 768px) {
+  //   #col1Content {
+  //     text-align: $cen;
+  //     align-items: $cen;
+  //     justify-content: $cen;
+  //   }
+}

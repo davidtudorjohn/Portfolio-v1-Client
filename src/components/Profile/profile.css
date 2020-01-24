@@ -1,0 +1,105 @@
+@-webkit-keyframes slideIn {
+  0% {
+    -webkit-transform: translateX(-50vw);
+            transform: translateX(-50vw);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0vw);
+            transform: translateX(0vw);
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    -webkit-transform: translateX(-50vw);
+            transform: translateX(-50vw);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0vw);
+            transform: translateX(0vw);
+    opacity: 1;
+  }
+}
+
+#heading {
+  -webkit-animation: slideIn 1.4s;
+          animation: slideIn 1.4s;
+  position: relative;
+  font-size: 28px;
+  letter-spacing: -0.1em;
+  margin-top: 1em;
+  text-decoration: underline;
+  -webkit-text-decoration-color: slateblue;
+          text-decoration-color: slateblue;
+}
+
+#location {
+  -webkit-animation: slideIn 1.4s;
+          animation: slideIn 1.4s;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 0.5em;
+}
+
+#col1Content {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+#portrait {
+  -webkit-animation: slideIn 1.4s;
+          animation: slideIn 1.4s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 300px;
+  border-radius: 100%;
+  border: solid 5px slateblue;
+}
+
+#portrait:hover {
+  margin-top: -3px;
+  margin-bottom: 3px;
+  -webkit-box-shadow: #30303060 0em 0.5em 1em 0.5em;
+          box-shadow: #30303060 0em 0.5em 1em 0.5em;
+}
+
+#faMapMarkerAlt {
+  color: #ccc;
+}
+
+#col1Content {
+  padding: 0em 4em;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+#nameWrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+/*# sourceMappingURL=profile.css.map */

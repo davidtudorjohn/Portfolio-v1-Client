@@ -13,7 +13,7 @@ const Projects = () => (
       <Project
         num="1"
         title="This Portfolio"
-        tech={["React.js", "ES6", "HTML5", "CSS3", "Sass", "Redux"]}
+        techs={["React.js", "ES6", "HTML5", "CSS3", "Sass", "Redux"]}
         description="A software engineer's portfolio"
         source="https://github.com/david-t-john/portfolio-v1"
         disabled="disabled"
@@ -21,7 +21,7 @@ const Projects = () => (
       <Project
         num="2"
         title="Project Title"
-        tech={[
+        techs={[
           "React.js",
           "ES6",
           "HTML5",
@@ -37,7 +37,7 @@ const Projects = () => (
       <Project
         num="3"
         title="MowUr"
-        tech={["ES6", "HTML5", "CSS3", "Wordpress", "Stripe"]}
+        techs={["ES6", "HTML5", "CSS3", "Wordpress", "Stripe"]}
         description="A marketplace web app for on-demand lawn mowing service"
         source=""
         viewAt="https://mowur.com"

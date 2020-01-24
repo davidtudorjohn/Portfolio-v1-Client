@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import "./landing.scss";
-import david from "./david.jpg";
+import Profile from "../Profile";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMapMarkerAlt, faHeart } from "@fortawesome/free-solid-svg-icons";
+import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import { like } from "../../actions";
 import { useDispatch, useSelector } from "react-redux";
-import Tech from "../Tech";
+import Techs from "../Techs";
 const Landing = () => {
   // const [isLiked, setIsLiked] = useState(false);
   const isLiked = useSelector(state => state.isLiked);
@@ -13,16 +13,7 @@ const Landing = () => {
   return (
     <div id="landing">
       <div id="col1">
-        <div id="col1Content">
-          <img id="portrait" src={david}></img>
-          <div id="nameWrap">
-            <h1 id="heading">David Tudor John</h1>
-          </div>
-          <div id="location">
-            <FontAwesomeIcon icon={faMapMarkerAlt} id="faMapMarkerAlt" />
-            <p>Atlanta, GA</p>
-          </div>
-        </div>
+        <Profile />
       </div>
       <div id="col2">
         <div id="landingContent">
@@ -31,19 +22,23 @@ const Landing = () => {
             I develop things for the web using state-of-the-art technologies.
           </p>
           <br />
-          <Tech name="React.js" />
-          <Tech name="ES6" />
-          <Tech name="HTML5" />
-          <Tech name="CSS3" />
-          <Tech name="Sass" />
-          <Tech name="Redux" />
-          <Tech name="Node.js" />
-          <Tech name="Express.js" />
-          <Tech name="MongoDB" />
-          <Tech name="Wordpress" />
-          <Tech name="Stripe" />
-          <Tech name="Git" />
-          <Tech name="Github" />
+          <Techs
+            names={[
+              "React.js",
+              "ES6",
+              "HTML5",
+              "CSS3",
+              "Sass",
+              "Redux",
+              "Node.js",
+              "Express.js",
+              "MongoDB",
+              "Wordpress",
+              "Stripe",
+              "Git",
+              "Github"
+            ]}
+          />
           <br />
           <button id="likeBtn" onClick={() => dispatch(like())}>
             {/* onClick={() => setIsLiked(!isLiked)}

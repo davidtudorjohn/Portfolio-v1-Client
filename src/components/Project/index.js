@@ -1,5 +1,5 @@
 import React from "react";
-import Tech from "../Tech";
+import Techs from "../Techs";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import "./project.scss";
@@ -9,9 +9,7 @@ const Project = props => (
       <FontAwesomeIcon icon={faArrowRight} /> {props.num}
     </p>
     <h2 className="projectTitle">{props.title}</h2>
-    {props.tech.map(t => (
-      <Tech name={t} />
-    ))}
+    <Techs names={props.techs} />
     <p className="description">{props.description}</p>
     <a className="sourceBtn" href={props.source}>
       Source Code
