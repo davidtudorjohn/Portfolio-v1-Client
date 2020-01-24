@@ -1,3 +1,15 @@
+#faGithub,
+#faLinkedin,
+#faEnvelopeSquare {
+  font-size: 20px;
+}
+
+#faPhone {
+  font-size: 17px;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
 #header {
   z-index: 99;
   display: -webkit-inline-box;
@@ -9,19 +21,22 @@
   border-bottom: solid 0.5px #bebebe;
   position: relative;
   -webkit-box-shadow: #00000040 0.2em 0.23em 0.2em;
-  box-shadow: #00000040 0.2em 0.23em 0.2em;
+          box-shadow: #00000040 0.2em 0.23em 0.2em;
 }
+
 #logo {
   font-size: 1.6em;
-  font-weight: 500;
+  font-weight: 700;
+  font-style: italic;
   letter-spacing: -0.05em;
   position: absolute;
   left: 7vw;
   line-height: 72px;
   text-decoration: underline;
   -webkit-text-decoration-color: slateblue;
-  text-decoration-color: slateblue;
+          text-decoration-color: slateblue;
 }
+
 .navItem {
   margin-left: 1em;
   padding: 0em 0.6em;
@@ -31,21 +46,25 @@
   transition: border-bottom 0.4s ease-in-out;
   display: none;
 }
+
 .navItem > a {
   color: black;
   -webkit-transition: color 0.4s ease-in-out;
   transition: color 0.4s ease-in-out;
 }
+
 .navItem > a:hover,
 .navItem > a:focus {
   color: slateblue;
 }
+
 .navItem:hover,
 .navItem:focus {
   -webkit-transition: border-bottom 0.4s ease-in-out;
   transition: border-bottom 0.4s ease-in-out;
   border-bottom: solid 2px slateblue;
 }
+
 #mobileMenu {
   background-color: rgba(0, 0, 0, 0);
   border: none;
@@ -56,6 +75,7 @@
   right: 7vw;
   font-size: 18px;
 }
+
 #mobileMenuContent {
   background-color: white;
   z-index: 5;
@@ -68,32 +88,37 @@
   transition: transform 0.4s ease-in-out;
   transition: transform 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out;
   -webkit-box-shadow: #00000020 0.2em 0.23em 0.2em;
-  box-shadow: #00000020 0.2em 0.23em 0.2em;
+          box-shadow: #00000020 0.2em 0.23em 0.2em;
 }
+
 .rotate {
   -webkit-transform: rotate(180deg);
-  transform: rotate(180deg);
+          transform: rotate(180deg);
   -webkit-transition: -webkit-transform 0.6s ease-in-out;
   transition: -webkit-transform 0.6s ease-in-out;
   transition: transform 0.6s ease-in-out;
   transition: transform 0.6s ease-in-out, -webkit-transform 0.6s ease-in-out;
 }
+
 .unrotate {
   -webkit-transform: rotate(-180deg);
-  transform: rotate(-180deg);
+          transform: rotate(-180deg);
   -webkit-transition: -webkit-transform 0.6s ease-in-out;
   transition: -webkit-transform 0.6s ease-in-out;
   transition: transform 0.6s ease-in-out;
   transition: transform 0.6s ease-in-out, -webkit-transform 0.6s ease-in-out;
 }
+
 .closed {
   -webkit-transform: translateY(-100%);
-  transform: translateY(-100%);
+          transform: translateY(-100%);
 }
+
 .open {
   -webkit-transform: translateY(0%);
-  transform: translateY(0%);
+          transform: translateY(0%);
 }
+
 .mobileItem {
   text-align: center;
   margin-left: -2.5em;
@@ -104,6 +129,7 @@
   -webkit-transition: border-bottom 0.4s ease-in-out;
   transition: border-bottom 0.4s ease-in-out;
 }
+
 .mobileItem > a {
   background-color: rgba(0, 0, 0, 0);
   padding: 2em 4em;
@@ -112,15 +138,18 @@
   -webkit-transition: color 0.4s ease-in-out;
   transition: color 0.4s ease-in-out;
 }
+
 .mobileItem > a:hover,
 .mobileItem > a:focus {
   color: slateblue;
 }
+
 .mobileItem:hover,
 .mobileItem:focus {
   background-color: #bebebe20;
   border-bottom: solid 2px slateblue;
 }
+
 @media screen and (min-width: 768px) {
   #mobileMenu {
     display: none;

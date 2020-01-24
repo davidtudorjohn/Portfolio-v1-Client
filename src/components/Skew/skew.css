@@ -1,26 +1,19 @@
 #skewWrap {
   background-color: #eee;
-  background: -webkit-gradient(
-    linear,
-    left top,
-    right top,
-    from(blueviolet),
-    color-stop(slateblue),
-    to(blueviolet)
-  );
+  background: -webkit-gradient(linear, left top, right top, from(blueviolet), color-stop(slateblue), to(blueviolet));
   background: linear-gradient(to right, blueviolet, slateblue, blueviolet);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   min-height: 90vh;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-transform: skew(0deg, -10deg);
-  transform: skew(0deg, -10deg);
+          transform: skew(0deg, -10deg);
   margin-top: 20vh;
   overflow-x: hidden;
   margin-bottom: 20vh;
@@ -35,13 +28,19 @@
   border-bottom-left-radius: 4em;
   border: solid 5px white;
   border-bottom: solid 15px white;
-  font-size: 56px;
+  font-size: 36px;
   color: white;
   -webkit-transform: skew(0deg, 10deg);
-  transform: skew(0deg, 10deg);
+          transform: skew(0deg, 10deg);
 }
 
 hr {
   border: solid 4px white;
+}
+
+@media screen and (min-width: 768px) {
+  #skewWrap h2 {
+    font-size: 56px;
+  }
 }
 /*# sourceMappingURL=skew.css.map */

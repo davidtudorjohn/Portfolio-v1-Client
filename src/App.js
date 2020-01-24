@@ -13,11 +13,9 @@ function App() {
     setIsLoading(() => !isLoading);
   }, []);
 
-  if (isLoading) {
-    return <h6 className="loading">Loading...</h6>;
-  }
-
-  return (
+  return isLoading ? (
+    <h6 className="loading">Loading...</h6>
+  ) : (
     <div className="App">
       <Header />
       <Landing />

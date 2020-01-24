@@ -2,6 +2,7 @@ import React from "react";
 import "./projects.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowDown, faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import Tech from "../Tech";
 const Projects = () => (
   <div id="projectSection">
     <h2 id="projectHeading">
@@ -14,12 +15,12 @@ const Projects = () => (
           <FontAwesomeIcon icon={faArrowRight} /> 1
         </p>
         <h2 className="projectTitle">This Portfolio</h2>
-        <p className="tech">React.js</p>
-        <p className="tech">ES6</p>
-        <p className="tech">HTML5</p>
-        <p className="tech">CSS3</p>
-        <p className="tech">Sass</p>
-        <p className="tech">Redux</p>
+        <Tech name="React.js" />
+        <Tech name="ES6" />
+        <Tech name="HTML5" />
+        <Tech name="CSS3" />
+        <Tech name="Sass" />
+        <Tech name="Redux" />
         <p className="description">A software engineer's portfolio</p>
         <a
           className="sourceBtn"
@@ -37,12 +38,13 @@ const Projects = () => (
           <FontAwesomeIcon icon={faArrowRight} /> 2
         </p>
         <h2 className="projectTitle">Project Title</h2>
-        <p className="tech">React.js</p>
-        <p className="tech">ES6</p>
-        <p className="tech">HTML5</p>
-        <p className="tech">CSS3</p>
-        <p className="tech">Express.js</p>
-        <p className="tech">MongoDB</p>
+        <Tech name="React.js" />
+        <Tech name="ES6" />
+        <Tech name="HTML5" />
+        <Tech name="CSS3" />
+        <Tech name="Express.js" />
+        <Tech name="MongoDB" />
+        <Tech name="Node.js" />
         <p className="description">A short description of the project</p>
         <a className="sourceBtn" href="https://github.com/david-t-john">
           Source Code
@@ -59,11 +61,11 @@ const Projects = () => (
           <FontAwesomeIcon icon={faArrowRight} /> 3
         </p>
         <h2 className="projectTitle">MowUr</h2>
-        <p className="tech">ES6</p>
-        <p className="tech">HTML5</p>
-        <p className="tech">CSS3</p>
-        <p className="tech">Wordpress</p>
-        <p className="tech">Stripe</p>
+        <Tech name="ES6" />
+        <Tech name="HTML5" />
+        <Tech name="CSS3" />
+        <Tech name="Wordpress" />
+        <Tech name="Stripe" />
         <p className="description">
           A marketplace web app for on-demand lawn mowing service
         </p>

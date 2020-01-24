@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMapMarkerAlt, faHeart } from "@fortawesome/free-solid-svg-icons";
 import { like } from "../../actions";
 import { useDispatch, useSelector } from "react-redux";
+import Tech from "../Tech";
 const Landing = () => {
   // const [isLiked, setIsLiked] = useState(false);
   const isLiked = useSelector(state => state.isLiked);
@@ -30,19 +31,19 @@ const Landing = () => {
             I develop things for the web using state-of-the-art technologies.
           </p>
           <br />
-          <p className="tech">React.js</p>
-          <p className="tech">ES6</p>
-          <p className="tech">HTML5</p>
-          <p className="tech">CSS3</p>
-          <p className="tech">Sass</p>
-          <p className="tech">Redux</p>
-          <p className="tech">Node.js</p>
-          <p className="tech">Express.js</p>
-          <p className="tech">MongoDB</p>
-          <p className="tech">Wordpress</p>
-          <p className="tech">Stripe</p>
-          <p className="tech">Git</p>
-          <p className="tech">Github</p>
+          <Tech name="React.js" />
+          <Tech name="ES6" />
+          <Tech name="HTML5" />
+          <Tech name="CSS3" />
+          <Tech name="Sass" />
+          <Tech name="Redux" />
+          <Tech name="Node.js" />
+          <Tech name="Express.js" />
+          <Tech name="MongoDB" />
+          <Tech name="Wordpress" />
+          <Tech name="Stripe" />
+          <Tech name="Git" />
+          <Tech name="Github" />
           <br />
           <button id="likeBtn" onClick={() => dispatch(like())}>
             {/* onClick={() => setIsLiked(!isLiked)}

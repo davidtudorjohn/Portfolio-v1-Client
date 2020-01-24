@@ -14,8 +14,5 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 80vh;
-}
-.loaded {
-  display: none;
+  height: 100vh;
 }
