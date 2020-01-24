@@ -1,21 +1,25 @@
 import React, { useState, useEffect } from "react";
-import Header from "./components/Header/Header";
+import Header from "./components/Header";
 import "./App.css";
-import Landing from "./components/Landing/Landing";
-import Projects from "./components/Projects/Projects";
-import Skew from "./components/Skew/Skew";
-import Footer from "./components/Footer/Footer";
-import Form from "./components/Form/Form";
+import Landing from "./components/Landing";
+import Projects from "./components/Projects";
+import Skew from "./components/Skew";
+import Footer from "./components/Footer";
+import Form from "./components/Form";
 function App() {
-  const [isLoading, setIsLoading] = useState("true");
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     setIsLoading(() => !isLoading);
   }, []);
+
+  if (isLoading) {
+    return <h6 className="loading">Loading...</h6>;
+  }
+
   return (
     <div className="App">
       <Header />
-      <h6 className={isLoading ? "loading" : "loaded"}>Loading...</h6>
       <Landing />
       <Projects />
       <Skew />
