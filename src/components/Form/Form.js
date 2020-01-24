@@ -4,42 +4,45 @@ const Form = () => {
   return (
     <div>
       <div id="formWrap">
-        <form autoComplete="off" name="formName" action="#" method="get">
+        <form autoComplete="off" name="formName" action="#" method="post">
           <h2 id="formTitle">Sample Form</h2>
           <br />
           <div className="inputWrap">
             <input
+              id="nameInput"
               className="formInput"
               type="text"
               name="name"
               autoComplete="off"
               required={true}
             />
-            <label className="inputLabel">
+            <label htmlFor="nameInput" className="inputLabel">
               <span className="labelContent">Name</span>
             </label>
           </div>
           <div className="inputWrap">
             <input
               className="formInput"
+              id="emailInput"
               type="text/email"
               name="email"
               autoComplete="off"
               required={true}
             />
-            <label className="inputLabel">
+            <label htmlFor="emailInput" className="inputLabel">
               <span className="labelContent">Email</span>
             </label>
           </div>
           <div className="inputWrap">
             <input
               className="formInput"
+              id="passwordInput"
               type="password"
               name="password"
               autoComplete="new-password"
               required={true}
             />
-            <label className="inputLabel">
+            <label htmlFor="passwordInput" className="inputLabel">
               <span className="labelContent">Password</span>
             </label>
           </div>
