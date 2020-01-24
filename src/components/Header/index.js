@@ -12,9 +12,7 @@ const Header = () => {
   return (
     <div>
       <div id="header">
-        <h1 id="logo" style={{ fontStyle: "italic", fontWeight: "700" }}>
-          DTJ
-        </h1>
+        <h1 id="logo">DTJ</h1>
         <nav>
           <ul id="navList">
             <li className="navItem">
