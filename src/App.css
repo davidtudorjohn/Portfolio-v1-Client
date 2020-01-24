@@ -10,10 +10,6 @@
   overflow: hidden;
   background-color: #eee;
 }
-button:focus,
-a:focus {
-  outline: none;
-}
 .loading {
   display: flex;
   justify-content: center;
