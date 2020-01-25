@@ -5,7 +5,7 @@ input:-webkit-autofill:active {
   -webkit-box-shadow: 0 0 0 30px #eee inset !important;
 }
 
-#signUpForm {
+#formWrap {
   padding: 2em 0em;
   overflow: hidden;
   width: 80vw;
@@ -15,6 +15,7 @@ input:-webkit-autofill:active {
   text-decoration: underline;
   -webkit-text-decoration-color: slateblue;
           text-decoration-color: slateblue;
+  letter-spacing: -0.05em;
 }
 
 .inputWrap {
@@ -86,6 +87,19 @@ input:-webkit-autofill:active {
   padding-top: 2em;
   border: none;
   outline: none;
+}
+
+#faEye {
+  color: slateblue;
+}
+
+#showHidePassword {
+  z-index: 99;
+  color: slateblue;
+  background: transparent;
+  border: solid 1px slateblue;
+  float: right;
+  text-align: right;
 }
 
 #formSubmit {

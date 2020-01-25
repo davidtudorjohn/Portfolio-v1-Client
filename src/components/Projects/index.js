@@ -17,6 +17,7 @@ const Projects = () => (
         description="A software engineer's portfolio"
         source="https://github.com/david-t-john/portfolio-v1"
         disabled="disabled"
+        youAreHere={true}
       />
       <Project
         num="2"
@@ -32,14 +33,13 @@ const Projects = () => (
         ]}
         description="A short description of the project"
         source="https://github.com/david-t-john/portfolio-v1"
-        viewAt=""
       />
       <Project
         num="3"
         title="MowUr"
         techs={["ES6", "HTML5", "CSS3", "Wordpress", "Stripe"]}
         description="A marketplace web app for on-demand lawn mowing service"
-        source=""
+        source="https://github.com/david-t-john/portfolio-v1"
         viewAt="https://mowur.com"
       />
     </div>

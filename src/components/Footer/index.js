@@ -1,8 +1,9 @@
 import React from "react";
 import "./footer.scss";
+import Logo from "../Logo";
 const Footer = () => (
   <div id="footerWrap">
-    <h1 id="logoFooter">DTJ</h1>
+    <Logo position="right" />
     <p id="footerText">
       Made with <strong>love</strong> in Atlanta
     </p>

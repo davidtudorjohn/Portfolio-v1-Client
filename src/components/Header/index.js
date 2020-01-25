@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import Logo from "../Logo";
 import "./header.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -12,7 +14,7 @@ const Header = () => {
   return (
     <div>
       <div id="header">
-        <h1 id="logo">DTJ</h1>
+        <Logo position="left" />
         <nav>
           <ul id="navList">
             <li className="navItem">

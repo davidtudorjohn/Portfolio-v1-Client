@@ -18,7 +18,7 @@ const Project = props => (
     <br />
     <br />
     <a className={`viewProjectBtn ${props.disabled}`} href={props.viewAt}>
-      View Project
+      {props.youAreHere ? "You Are Here" : "View Project"}
     </a>
   </div>
 );

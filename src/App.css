@@ -9,6 +9,7 @@
 .App {
   overflow: hidden;
   background-color: #eee;
+  max-width: 100vw;
 }
 a {
   cursor: pointer;

@@ -1,8 +1,9 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "./landing.scss";
 import Profile from "../Profile";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHeart } from "@fortawesome/free-solid-svg-icons";
+import { faHeart, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { like } from "../../actions";
 import { useDispatch, useSelector } from "react-redux";
 import Techs from "../Techs";
@@ -21,6 +22,14 @@ const Landing = () => {
           <p id="subHead">
             I develop things for the web using state-of-the-art technologies.
           </p>
+          <Link to="/more">
+            <div id="learnMoreWrap">
+              <FontAwesomeIcon id="faArrowRight" icon={faArrowRight} />
+              <p id="learnMore"> Learn more</p>
+              <br />
+              <br />
+            </div>
+          </Link>
           <br />
           <Techs
             names={[

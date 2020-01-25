@@ -1,0 +1,20 @@
+.featureWrap {
+  margin: 1em 0em;
+  padding: 2em;
+  border: solid 2px slateblue;
+  border-radius: 5px;
+}
+
+.featureWrap:hover {
+  background-color: #cccccc50;
+}
+
+.feature {
+  color: slateblue;
+  letter-spacing: -0.05em;
+}
+
+.tool {
+  letter-spacing: -0.05em;
+}
+/*# sourceMappingURL=feature.css.map */

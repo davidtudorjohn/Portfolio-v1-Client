@@ -69,13 +69,36 @@
   margin: 0vh 7vw 5vh 7vw;
 }
 
+#learnMoreWrap {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  text-align: left;
+}
+
+#learnMore {
+  color: black;
+  font-weight: 600;
+  padding-left: 0.2em;
+}
+
+#learnMore:hover {
+  text-decoration: underline;
+  -webkit-text-decoration-color: slateblue;
+          text-decoration-color: slateblue;
+}
+
+#faArrowRight {
+  color: slateblue;
+}
+
 #landingContent > h2 {
   color: slateblue;
   letter-spacing: -0.06em;
 }
 
 #likeBtn {
-  padding-top: 1em;
+  padding-top: 0.3em;
   cursor: pointer;
   outline: none;
   border: none;

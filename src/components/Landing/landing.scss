@@ -42,12 +42,28 @@
   position: relative;
   margin: 0vh 7vw 5vh 7vw;
 }
+#learnMoreWrap {
+  display: inline-flex;
+  text-align: left;
+}
+#learnMore {
+  color: black;
+  font-weight: 600;
+  padding-left: 0.2em;
+  &:hover {
+    text-decoration: underline;
+    text-decoration-color: $color1;
+  }
+}
+#faArrowRight {
+  color: $color1;
+}
 #landingContent > h2 {
   color: $color1;
   letter-spacing: -0.06em;
 }
 #likeBtn {
-  padding-top: 1em;
+  padding-top: 0.3em;
   cursor: pointer;
   outline: none;
   border: none;

@@ -13,7 +13,7 @@ input:-webkit-autofill:active {
 #formTitle {
   text-decoration: underline;
   text-decoration-color: $color1;
-  // padding-bottom: -1em;
+  letter-spacing: -0.05em;
 }
 .inputWrap {
   display: flex;
@@ -65,6 +65,18 @@ input:-webkit-autofill:active {
   padding-top: 2em;
   border: none;
   outline: none;
+}
+#faEye {
+  color: $color1;
+}
+#showHidePassword {
+  // width: 100%;
+  z-index: 99;
+  color: $color1;
+  background: transparent;
+  border: solid 1px $color1;
+  float: right;
+  text-align: right;
 }
 #formSubmit {
   cursor: pointer;

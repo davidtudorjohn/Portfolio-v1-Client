@@ -1,0 +1,18 @@
+@import "../../main";
+#logo {
+  color: black;
+  font-size: 1.6em;
+  font-weight: 700;
+  font-style: italic;
+  letter-spacing: -0.05em;
+  position: absolute;
+  line-height: 72px;
+  text-decoration: underline;
+  text-decoration-color: $color1;
+}
+.left {
+  left: 7vw;
+}
+.right {
+  right: 7vw;
+}

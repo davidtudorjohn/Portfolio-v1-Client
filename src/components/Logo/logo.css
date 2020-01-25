@@ -1,0 +1,21 @@
+#logo {
+  color: black;
+  font-size: 1.6em;
+  font-weight: 700;
+  font-style: italic;
+  letter-spacing: -0.05em;
+  position: absolute;
+  line-height: 72px;
+  text-decoration: underline;
+  -webkit-text-decoration-color: slateblue;
+          text-decoration-color: slateblue;
+}
+
+.left {
+  left: 7vw;
+}
+
+.right {
+  right: 7vw;
+}
+/*# sourceMappingURL=logo.css.map */
