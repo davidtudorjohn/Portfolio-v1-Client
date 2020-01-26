@@ -6,9 +6,13 @@ input:-webkit-autofill:active {
   -webkit-box-shadow: 0 0 0 30px $colorBG inset !important;
 }
 #formWrap {
+  display: flex;
+  justify-content: $cen;
+  align-items: $cen;
   padding: 2em 0em;
   overflow: hidden;
   width: 80vw;
+  min-height: 70vh;
 }
 #formTitle {
   text-decoration: underline;
@@ -90,6 +94,13 @@ input:-webkit-autofill:active {
   padding: $btnPad;
   outline: none;
   margin: 1em 0em;
+}
+#loginOrRegister {
+  border: none;
+  color: $color1;
+  font-weight: 600;
+  background: $transp;
+  // margin-left: 0.3em;
 }
 #formSubmit:hover,
 #formSubmit:focus {

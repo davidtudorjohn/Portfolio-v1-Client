@@ -6,9 +6,19 @@ input:-webkit-autofill:active {
 }
 
 #formWrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 2em 0em;
   overflow: hidden;
   width: 80vw;
+  min-height: 70vh;
 }
 
 #formTitle {
@@ -114,6 +124,13 @@ input:-webkit-autofill:active {
   padding: 0.6em 1.2em;
   outline: none;
   margin: 1em 0em;
+}
+
+#loginOrRegister {
+  border: none;
+  color: slateblue;
+  font-weight: 600;
+  background: rgba(0, 0, 0, 0);
 }
 
 #formSubmit:hover,
