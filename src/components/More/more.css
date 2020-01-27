@@ -30,6 +30,10 @@
           text-decoration-color: slateblue;
 }
 
+#backBtn:focus {
+  outline: auto;
+}
+
 #backBtnText {
   margin-left: 0.2em;
 }

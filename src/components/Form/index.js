@@ -1,13 +1,20 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
+import Message from "../Message";
 import "./form.scss";
+
 const Form = () => {
   const [isLogIn, setIsLogIn] = useState(true);
   const [username, setUsername] = useState("");
   const [userEmail, setUserEmail] = useState("");
   const [userPassword, setUserPassword] = useState("");
   const [isPasswordVisible, setIsPasswordVisible] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [loggedInMsg, setLoggedInMsg] = useState(false);
+  const [logInFailMsg, setLogInFailMsg] = useState(false);
+  const [registeredMsg, setRegisteredMsg] = useState(false);
+  const [registerFailMsg, setRegisterFailMsg] = useState(false);
   const handleUsername = e => {
     setUsername(e.target.value);
   };
@@ -21,6 +28,27 @@ const Form = () => {
     e.preventDefault();
     setIsPasswordVisible(!isPasswordVisible);
   };
+  const handleIsLoggedIn = () => {
+    handleLoggedInMsg();
+    setIsLoggedIn(true);
+  };
+  const handleLoggedInMsg = e => {
+    setLoggedInMsg(true);
+    setTimeout(() => setLoggedInMsg(false), 3000);
+  };
+  const handleLogInFailMsg = e => {
+    setLogInFailMsg(true);
+    setTimeout(() => setLogInFailMsg(false), 3000);
+  };
+  const handleRegisteredMsg = e => {
+    setRegisteredMsg(true);
+    setTimeout(() => setRegisteredMsg(false), 3000);
+  };
+  const handleRegisterFailMsg = e => {
+    setRegisterFailMsg(true);
+    setTimeout(() => setRegisterFailMsg(false), 3000);
+  };
+
   const handleRegister = async e => {
     e.preventDefault();
     const user = {
@@ -33,24 +61,58 @@ const Form = () => {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(user)
     })
-      .then(res => console.log(res))
+      .then(res => {
+        console.log(res);
+        if (res.status === 200) {
+          setIsLogIn(true);
+          handleRegisteredMsg();
+        } else {
+          handleRegisterFailMsg();
+        }
+      })
       .catch(err => console.log(err));
-
-    // alert(
-    //   `Username: ${username}\nEmail: ${userEmail}\nPassword: ${userPassword}`
-    // );
   };
-  const handleLogin = e => {
+  const handleLogin = async e => {
     e.preventDefault();
-
-    // alert(`Email: ${userEmail}\nPassword: ${userPassword}`);
+    const user = {
+      email: `${userEmail}`,
+      password: `${userPassword}`
+    };
+    await fetch("http://localhost:5000/api/users/login", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(user)
+    })
+      .then(res => {
+        console.log(res.status);
+        if (res.status === 200) {
+          handleIsLoggedIn();
+        } else {
+          handleLogInFailMsg();
+        }
+      })
+      // .then(res => localStorage.setItem("auth-token", res.headers("auth-token"))
+      // .then(console.log(localStorage.getItem("auth-token")))
+      .catch(err => console.log(err));
   };
   const handleFormToggle = e => {
     setUsername("");
     setIsLogIn(!isLogIn);
   };
+
+  if (loggedInMsg) {
+    return <Message content="Log in successful" />;
+  }
+
+  if (isLoggedIn) {
+    return null;
+  }
+
   return isLogIn ? (
     <div id="formWrap">
+      {registeredMsg ? <Message content="Registration successful" /> : ""}
+
+      {logInFailMsg ? <Message content="Invalid email or password" /> : ""}
       <form id="logInForm" autoComplete="off" name="logInForm">
         <h2 id="formTitle">Log In</h2>
         <br />
@@ -109,6 +171,11 @@ const Form = () => {
     </div>
   ) : (
     <div id="formWrap">
+      {registerFailMsg ? (
+        <Message content="Registration was unsuccessful. Please try again." />
+      ) : (
+        ""
+      )}
       <form id="registerForm" autoComplete="off" name="registerForm">
         <h2 id="formTitle">Register</h2>
         <br />

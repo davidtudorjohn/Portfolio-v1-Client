@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
 const Profile = () => (
   <div id="col1Content">
-    <img id="portrait" src={david}></img>
+    <img id="portrait" src={david} alt="portrait"></img>
     <div id="nameWrap">
       <h1 id="heading">David Tudor John</h1>
     </div>
