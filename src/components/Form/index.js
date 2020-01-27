@@ -1,16 +1,21 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
+import { useDispatch, useSelector } from "react-redux";
+import { authenticated } from "../../actions";
 import Message from "../Message";
 import "./form.scss";
 
 const Form = () => {
+  const isLoggedIn = useSelector(state => state.isLoggedIn);
+  const dispatch = useDispatch();
+  // const [isLoggedIn, setIsLoggedIn] = useState(false);
+
   const [isLogIn, setIsLogIn] = useState(true);
   const [username, setUsername] = useState("");
   const [userEmail, setUserEmail] = useState("");
   const [userPassword, setUserPassword] = useState("");
   const [isPasswordVisible, setIsPasswordVisible] = useState(false);
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [loggedInMsg, setLoggedInMsg] = useState(false);
   const [logInFailMsg, setLogInFailMsg] = useState(false);
   const [registeredMsg, setRegisteredMsg] = useState(false);
@@ -30,7 +35,8 @@ const Form = () => {
   };
   const handleIsLoggedIn = () => {
     handleLoggedInMsg();
-    setIsLoggedIn(true);
+    dispatch(authenticated());
+    // setIsLoggedIn(true);
   };
   const handleLoggedInMsg = e => {
     setLoggedInMsg(true);

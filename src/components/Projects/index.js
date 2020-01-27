@@ -13,7 +13,16 @@ const Projects = () => (
       <Project
         num="1"
         title="This Portfolio"
-        techs={["React.js", "ES6", "HTML5", "CSS3", "Sass", "Redux"]}
+        techs={[
+          "React.js",
+          "ES6",
+          "HTML5",
+          "CSS3",
+          "Sass",
+          "Redux",
+          "Express.js",
+          "MongoDB"
+        ]}
         description="A software engineer's portfolio"
         source="https://github.com/david-t-john/portfolio-v1"
         disabled="disabled"

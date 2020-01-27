@@ -40,6 +40,12 @@
   transition: border-bottom 0.4s ease-in-out;
   border-bottom: solid 2px $color1;
 }
+#logOutBtn {
+  color: $color1;
+  border: none;
+  background-color: $transp;
+  font-weight: 600;
+}
 #mobileMenu {
   background-color: $transp;
   border: none;

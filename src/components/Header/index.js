@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Logo from "../Logo";
+import Message from "../Message";
 import "./header.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -8,10 +9,26 @@ import {
   faEnvelopeSquare
 } from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { useSelector, useDispatch } from "react-redux";
+import { logout } from "../../actions";
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+
+  const dispatch = useDispatch();
+  const isLoggedIn = useSelector(state => state.isLoggedIn);
+  const handleLogOut = () => {
+    dispatch(logout());
+    handleLoggedOutMsg();
+  };
+  const [loggedOutMsg, setLoggedOutMsg] = useState(false);
+  const handleLoggedOutMsg = () => {
+    setLoggedOutMsg(true);
+    setTimeout(() => setLoggedOutMsg(false), 3000);
+  };
+
   return (
     <div>
+      {loggedOutMsg ? <Message content="Log Out Successful" /> : ""}
       <div id="header">
         <Logo position="left" />
         <nav>
@@ -40,6 +57,16 @@ const Header = () => {
                 <FontAwesomeIcon id="faPhone" icon={faPhone} /> (678)-699-4962
               </a>
             </li>
+
+            {isLoggedIn ? (
+              <li className="navItem">
+                <button id="logOutBtn" onClick={handleLogOut}>
+                  Log Out
+                </button>
+              </li>
+            ) : (
+              ""
+            )}
           </ul>
         </nav>
         <button
@@ -77,6 +104,15 @@ const Header = () => {
                 <FontAwesomeIcon id="faPhone" icon={faPhone} /> (678)-699-4962
               </a>
             </li>
+            {isLoggedIn ? (
+              <li className="mobileItem">
+                <button id="logOutBtn" onClick={handleLogOut}>
+                  Log Out
+                </button>
+              </li>
+            ) : (
+              ""
+            )}
           </ul>
         </nav>
       </div>

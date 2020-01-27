@@ -10,7 +10,7 @@ import Form from "./components/Form";
 import More from "./components/More";
 function App() {
   const [isLoading, setIsLoading] = useState(true);
-
+  // eslint-disable-next-line
   useEffect(() => {
     setIsLoading(() => !isLoading);
   }, []);
