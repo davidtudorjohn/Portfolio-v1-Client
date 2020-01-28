@@ -90,7 +90,8 @@ const Form = () => {
       body: JSON.stringify(user)
     })
       .then(res => {
-        console.log(res.status);
+        console.log(res);
+        console.log(res.token);
         if (res.status === 200) {
           handleIsLoggedIn();
         } else {
