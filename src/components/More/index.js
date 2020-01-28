@@ -21,7 +21,7 @@ const More = () => (
         tool="Redux, Component State, and Context"
       />
       <Feature feature="Backend Framework" tool="Express.js" />
-      <Feature feature="Data Management" tool="MongoDB" />
+      <Feature feature="Data Management" tool="MongoDB and Mongoose" />
     </div>
     <div id="moreCol2">
       <Feature feature="CSS Preprocessing" tool="Sass" />
