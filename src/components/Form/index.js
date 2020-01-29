@@ -91,7 +91,9 @@ const Form = () => {
     })
       .then(res => {
         console.log(res);
-        console.log(res.token);
+        // let token = res.headers["auth-token"];
+        // console.log(res.headers);
+        localStorage.setItem("auth-token", "token");
         if (res.status === 200) {
           handleIsLoggedIn();
         } else {

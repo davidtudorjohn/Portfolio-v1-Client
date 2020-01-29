@@ -15,7 +15,7 @@ const More = () => (
     </Link>
     <div id="moreCol1">
       <Feature feature="Routing" tool="React Router" />
-      <Feature feature="REST API" tool="Fetch" />
+      <Feature feature="REST API" tool="Fetch and Express.js" />
       <Feature
         feature="State Management"
         tool="Redux, Component State, and Context"

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Logo from "../Logo";
 import Message from "../Message";
+import NavItem from "../NavItem";
 import "./header.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -17,6 +18,7 @@ const Header = () => {
   const dispatch = useDispatch();
   const isLoggedIn = useSelector(state => state.isLoggedIn);
   const handleLogOut = () => {
+    localStorage.removeItem("auth-token");
     dispatch(logout());
     handleLoggedOutMsg();
   };
@@ -33,37 +35,36 @@ const Header = () => {
         <Logo position="left" />
         <nav>
           <ul id="navList">
-            <li className="navItem">
-              <a href="https://github.com/david-t-john">
-                <FontAwesomeIcon id="faGithub" icon={faGithub} />
-              </a>
-            </li>
-            <li className="navItem">
-              <a href="https://linkedin.com/in/david-t-john">
-                <FontAwesomeIcon id="faLinkedin" icon={faLinkedin} />
-              </a>
-            </li>
-            <li className="navItem">
-              <a href="mailto:davidjohn_atl@yahoo.com">
-                <FontAwesomeIcon
-                  id="faEnvelopeSquare"
-                  icon={faEnvelopeSquare}
-                />{" "}
-                Email me
-              </a>
-            </li>
-            <li className="navItem">
-              <a href="tel:+1-678-699-4962">
-                <FontAwesomeIcon id="faPhone" icon={faPhone} /> (678)-699-4962
-              </a>
-            </li>
-
+            <NavItem
+              href="https://github.com/david-t-john"
+              icon={faGithub}
+              content=" Github"
+              class="navItem"
+            />
+            <NavItem
+              href="https://linkedin.com/in/david-t-john"
+              icon={faLinkedin}
+              content=" LinkedIn"
+              class="navItem"
+            />
+            <NavItem
+              href="mailto:davidjohn_atl@yahoo.com"
+              icon={faEnvelopeSquare}
+              content=" Email me"
+              class="navItem"
+            />
+            <NavItem
+              href="tel:+1-678-699-4962"
+              icon={faPhone}
+              content=" (678)-699-4962"
+              class="navItem"
+            />
             {isLoggedIn ? (
-              <li className="navItem">
-                <button id="logOutBtn" onClick={handleLogOut}>
-                  Log Out
-                </button>
-              </li>
+              <NavItem
+                content="Log Out"
+                action={handleLogOut}
+                class="navItem"
+              />
             ) : (
               ""
             )}
@@ -80,36 +81,36 @@ const Header = () => {
       <div id="mobileMenuContent" className={isOpen ? "open" : "closed"}>
         <nav>
           <ul id="mobileList">
-            <li className="mobileItem">
-              <a href="https://github.com/david-t-john">
-                <FontAwesomeIcon icon={faGithub} id="faGithub" /> Github
-              </a>
-            </li>
-            <li className="mobileItem">
-              <a href="https://linkedin.com/in/david-t-john">
-                <FontAwesomeIcon icon={faLinkedin} id="faLinkedin" /> LinkedIn
-              </a>
-            </li>
-            <li className="mobileItem">
-              <a href="mailto:davidjohn_atl@yahoo.com">
-                <FontAwesomeIcon
-                  id="faEnvelopeSquare"
-                  icon={faEnvelopeSquare}
-                />{" "}
-                Email me
-              </a>
-            </li>
-            <li className="mobileItem">
-              <a href="tel:+1-678-699-4962">
-                <FontAwesomeIcon id="faPhone" icon={faPhone} /> (678)-699-4962
-              </a>
-            </li>
+            <NavItem
+              href="https://github.com/david-t-john"
+              icon={faGithub}
+              content=" Github"
+              class="mobileItem"
+            />
+            <NavItem
+              href="https://linkedin.com/in/david-t-john"
+              icon={faLinkedin}
+              content=" LinkedIn"
+              class="mobileItem"
+            />
+            <NavItem
+              href="mailto:davidjohn_atl@yahoo.com"
+              icon={faEnvelopeSquare}
+              content=" Email me"
+              class="mobileItem"
+            />
+            <NavItem
+              href="tel:+1-678-699-4962"
+              icon={faPhone}
+              content=" (678)-699-4962"
+              class="mobileItem"
+            />
             {isLoggedIn ? (
-              <li className="mobileItem">
-                <button id="logOutBtn" onClick={handleLogOut}>
-                  Log Out
-                </button>
-              </li>
+              <NavItem
+                content="Log Out"
+                action={handleLogOut}
+                class="mobileItem"
+              />
             ) : (
               ""
             )}

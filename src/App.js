@@ -18,7 +18,7 @@ function App() {
   return isLoading ? (
     <h6 className="loading">Loading...</h6>
   ) : (
-    <Router>
+    <Router onUpdate={() => window.scrollTo(0, 0)}>
       <Switch>
         <div className="App">
           <Header />
