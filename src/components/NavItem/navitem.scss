@@ -1,1 +1,53 @@
 @import "../../main";
+
+.navItem {
+  margin-left: 1em;
+  padding: 0em 0.6em;
+  font-weight: 600;
+  border-bottom: solid 2px $transp;
+  transition: border-bottom 0.4s ease-in-out;
+  display: none;
+}
+.navItem > a {
+  color: black;
+  transition: color 0.4s ease-in-out;
+}
+.navItem > a:hover,
+.navItem > a:focus {
+  color: $color1;
+}
+.navItem:hover,
+.navItem:focus {
+  transition: border-bottom 0.4s ease-in-out;
+  border-bottom: solid 2px $color1;
+}
+.mobileItem {
+  text-align: center;
+  margin-left: -2.5em;
+  left: 0;
+  width: 100vw;
+  padding: 1em 0em;
+  border-bottom: solid 2px $transp;
+  transition: border-bottom 0.4s ease-in-out;
+}
+.mobileItem > a {
+  background-color: $transp;
+  padding: 2em 4em;
+  font-weight: 600;
+  color: black;
+  transition: color 0.4s ease-in-out;
+}
+.mobileItem > a:hover,
+.mobileItem > a:focus {
+  color: $color1;
+}
+.mobileItem:hover,
+.mobileItem:focus {
+  background-color: #bebebe20;
+  border-bottom: solid 2px $color1;
+}
+@media screen and (min-width: 768px) {
+  .navItem {
+    display: block;
+  }
+}

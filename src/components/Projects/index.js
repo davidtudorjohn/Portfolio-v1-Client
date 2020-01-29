@@ -4,8 +4,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 import Project from "../Project";
 const Projects = () => (
-  <div id="projectSection">
-    <h2 id="projectHeading">
+  <div id="projectsSection">
+    <h2 id="projectsHeading">
       CHECK OUT SOME OF MY RECENT WORK <br />
       <FontAwesomeIcon icon={faArrowDown} />
     </h2>
@@ -21,6 +21,7 @@ const Projects = () => (
           "Sass",
           "Redux",
           "Express.js",
+          "Node.js",
           "MongoDB"
         ]}
         description="A software engineer's portfolio"

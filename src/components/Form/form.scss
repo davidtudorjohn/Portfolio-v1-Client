@@ -70,18 +70,7 @@ input:-webkit-autofill:active {
   border: none;
   outline: none;
 }
-#faEye {
-  color: $color1;
-}
-#showHidePassword {
-  // width: 100%;
-  z-index: 99;
-  color: $color1;
-  background: transparent;
-  border: solid 1px $color1;
-  float: right;
-  text-align: right;
-}
+
 #formSubmit {
   cursor: pointer;
   color: $color1;
@@ -100,9 +89,7 @@ input:-webkit-autofill:active {
   color: $color1;
   font-weight: 600;
   background: $transp;
-  // margin-left: 0.3em;
 }
-
 #formSubmit:hover,
 #formSubmit:focus {
   background-color: $color1;

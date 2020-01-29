@@ -1,9 +1,8 @@
 import React, { useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 import { useDispatch, useSelector } from "react-redux";
 import { authenticated } from "../../actions";
 import Message from "../Message";
+import PasswordVis from "../PasswordVis";
 import "./form.scss";
 
 const Form = () => {
@@ -54,6 +53,10 @@ const Form = () => {
     setRegisterFailMsg(true);
     setTimeout(() => setRegisterFailMsg(false), 3000);
   };
+  const handleFormToggle = e => {
+    setUsername("");
+    setIsLogIn(!isLogIn);
+  };
 
   const handleRegister = async e => {
     e.preventDefault();
@@ -90,23 +93,16 @@ const Form = () => {
       body: JSON.stringify(user)
     })
       .then(res => {
-        console.log(res);
+        console.log(res, res.headers);
         // let token = res.headers["auth-token"];
-        // console.log(res.headers);
-        localStorage.setItem("auth-token", "token");
         if (res.status === 200) {
           handleIsLoggedIn();
+          localStorage.setItem("auth-token", "token");
         } else {
           handleLogInFailMsg();
         }
       })
-      // .then(res => localStorage.setItem("auth-token", res.headers("auth-token"))
-      // .then(console.log(localStorage.getItem("auth-token")))
       .catch(err => console.log(err));
-  };
-  const handleFormToggle = e => {
-    setUsername("");
-    setIsLogIn(!isLogIn);
   };
 
   if (loggedInMsg) {
@@ -165,13 +161,11 @@ const Form = () => {
           id="formSubmit"
           onClick={handleLogin}
         ></input>
-        <button onClick={handlePasswordVis} id="showHidePassword">
-          {isPasswordVisible ? (
-            <FontAwesomeIcon icon={faEyeSlash} id="faEyeSlash" />
-          ) : (
-            <FontAwesomeIcon icon={faEye} id="faEye" />
-          )}
-        </button>
+
+        <PasswordVis
+          action={handlePasswordVis}
+          visibility={isPasswordVisible}
+        />
         <br />
         <button id="loginOrRegister" onClick={handleFormToggle}>
           Or Register
@@ -244,13 +238,11 @@ const Form = () => {
           id="formSubmit"
           onClick={handleRegister}
         ></input>
-        <button onClick={handlePasswordVis} id="showHidePassword">
-          {isPasswordVisible ? (
-            <FontAwesomeIcon icon={faEyeSlash} id="faEyeSlash" />
-          ) : (
-            <FontAwesomeIcon icon={faEye} id="faEye" />
-          )}
-        </button>
+
+        <PasswordVis
+          action={handlePasswordVis}
+          visibility={isPasswordVisible}
+        />
         <br />
         <button id="loginOrRegister" onClick={handleFormToggle}>
           Or Log In

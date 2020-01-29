@@ -1,13 +1,4 @@
 @import "../../main";
-#faGithub,
-#faLinkedin,
-#faEnvelopeSquare {
-  font-size: 20px;
-}
-#faPhone {
-  font-size: 17px;
-  transform: rotate(90deg);
-}
 #header {
   z-index: 99;
   display: inline-flex;
@@ -17,28 +8,6 @@
   border-bottom: solid 0.5px #bebebe;
   position: relative;
   box-shadow: #00000040 0.2em 0.23em 0.2em;
-}
-
-.navItem {
-  margin-left: 1em;
-  padding: 0em 0.6em;
-  font-weight: 600;
-  border-bottom: solid 2px $transp;
-  transition: border-bottom 0.4s ease-in-out;
-  display: none;
-}
-.navItem > a {
-  color: black;
-  transition: color 0.4s ease-in-out;
-}
-.navItem > a:hover,
-.navItem > a:focus {
-  color: $color1;
-}
-.navItem:hover,
-.navItem:focus {
-  transition: border-bottom 0.4s ease-in-out;
-  border-bottom: solid 2px $color1;
 }
 #logOutBtn {
   color: $color1;
@@ -80,31 +49,7 @@
 .open {
   transform: translateY(0%);
 }
-.mobileItem {
-  text-align: center;
-  margin-left: -2.5em;
-  left: 0;
-  width: 100vw;
-  padding: 1em 0em;
-  border-bottom: solid 2px $transp;
-  transition: border-bottom 0.4s ease-in-out;
-}
-.mobileItem > a {
-  background-color: $transp;
-  padding: 2em 4em;
-  font-weight: 600;
-  color: black;
-  transition: color 0.4s ease-in-out;
-}
-.mobileItem > a:hover,
-.mobileItem > a:focus {
-  color: $color1;
-}
-.mobileItem:hover,
-.mobileItem:focus {
-  background-color: #bebebe20;
-  border-bottom: solid 2px $color1;
-}
+
 @media screen and (min-width: 768px) {
   #mobileMenu {
     display: none;
@@ -118,9 +63,6 @@
     position: absolute;
     right: 7vw;
     top: 2px;
-  }
-  .navItem {
-    display: block;
   }
 }
 @media only screen and (min-width: 1080px) {

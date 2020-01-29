@@ -1,13 +1,5 @@
 @import "../../main";
-#projectHeading {
-  animation: bounce 1.4s ease-in-out infinite;
-  text-align: center;
-  width: 100vw;
-  padding: 1em 2em 1em 2em;
-  letter-spacing: -0.1em;
-  color: $color1;
-  font-size: xx-large;
-}
+
 .projectCard {
   padding: 2em 2em 2.6em 2em;
   display: block;
@@ -16,6 +8,7 @@
   background-color: white;
   min-height: 50vh;
   min-width: 80vw;
+  max-width: 80vw;
   margin: 0em 1em 2em 1em;
   border-bottom: solid 3px #bebebe;
   border-right: solid 3px #bebebe;
@@ -67,5 +60,6 @@
     background-color: white;
     min-height: 50vh;
     min-width: 28vw;
+    max-width: 28vw;
   }
 }

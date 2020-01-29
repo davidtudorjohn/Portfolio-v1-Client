@@ -54,7 +54,7 @@
   }
 }
 
-#projectSection {
+#projectsSection {
   background-color: #eee;
   width: 100vw;
 }
@@ -66,9 +66,12 @@
   overflow-x: hidden;
   width: 100vw;
   content: contain;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-#projectHeading {
+#projectsHeading {
   -webkit-animation: bounce 1.4s ease-in-out infinite;
           animation: bounce 1.4s ease-in-out infinite;
   text-align: center;
@@ -79,77 +82,11 @@
   font-size: xx-large;
 }
 
-.projectCard {
-  padding: 2em 2em 2.6em 2em;
-  display: block;
-  text-align: left;
-  border-radius: 5px;
-  background-color: white;
-  min-height: 50vh;
-  min-width: 80vw;
-  margin: 0em 1em 2em 1em;
-  border-bottom: solid 3px #bebebe;
-  border-right: solid 3px #bebebe;
-}
-
-.num {
-  color: slateblue;
-  font-weight: 700;
-  font-size: 20px;
-  padding-bottom: 0.3em;
-}
-
-.projectTitle {
-  color: slateblue;
-  letter-spacing: -0.06em;
-  padding-bottom: 1em;
-}
-
-.description {
-  padding: 1em 0em 2em 0em;
-}
-
-.sourceBtn {
-  background-color: rgba(0, 0, 0, 0);
-  border: solid 2px slateblue;
-  border-radius: 5px;
-  padding: 0.6em 1.2em;
-  color: slateblue;
-  font-weight: 600;
-  width: 100%;
-}
-
-.sourceBtn:hover,
-.sourceBtn:focus {
-  background-color: #cccccc50;
-}
-
-.viewProjectBtn {
-  background-color: slateblue;
-  border: solid 2px slateblue;
-  border-radius: 5px;
-  padding: 0.6em 1.2em;
-  color: white;
-  font-weight: 600;
-  width: 100%;
-}
-
-.disabled {
-  background-color: #ccc;
-  border: solid 2px #ccc;
-  cursor: auto;
-}
-
 @media screen and (min-width: 768px) {
   #projectsWrap {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-  }
-  .projectCard {
-    background-color: white;
-    min-height: 50vh;
-    min-width: 28vw;
   }
 }
 /*# sourceMappingURL=projects.css.map */

@@ -27,7 +27,6 @@ const Header = () => {
     setLoggedOutMsg(true);
     setTimeout(() => setLoggedOutMsg(false), 3000);
   };
-
   return (
     <div>
       {loggedOutMsg ? <Message content="Log Out Successful" /> : ""}
@@ -78,6 +77,7 @@ const Header = () => {
           <FontAwesomeIcon icon={faBars} />
         </button>
       </div>
+
       <div id="mobileMenuContent" className={isOpen ? "open" : "closed"}>
         <nav>
           <ul id="mobileList">
