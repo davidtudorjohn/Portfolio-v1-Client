@@ -19,56 +19,9 @@ input:-webkit-autofill:active {
   text-decoration-color: $color1;
   letter-spacing: -0.05em;
 }
-.inputWrap {
-  display: flex;
-  position: relative;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin-bottom: 1em;
-  background-color: $colorBG;
-}
 #formWrap > form {
   position: relative;
   width: 100%;
-}
-.inputLabel {
-  pointer-events: none;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 100%;
-  border-bottom: solid 1px black;
-  width: 100%;
-}
-.inputLabel::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  border-bottom: solid 3px $color1;
-  transform: translateX(-100%);
-  transition: transform 0.3s ease-in-out;
-}
-.labelContent {
-  font-weight: 600;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  pointer-events: none;
-  transition: all 0.3s ease-in-out;
-}
-.formInput {
-  font-size: 15px;
-  font-weight: 500;
-  left: 0;
-  bottom: 0;
-  background-color: $transp;
-  width: 100%;
-  padding-top: 2em;
-  border: none;
-  outline: none;
 }
 
 #formSubmit {
@@ -95,15 +48,7 @@ input:-webkit-autofill:active {
   background-color: $color1;
   color: white;
 }
-.formInput:focus + .inputLabel::after,
-.formInput:valid + .inputLabel::after {
-  transform: translateX(0%);
-}
-.formInput:focus + .inputLabel .labelContent,
-.formInput:valid + .inputLabel .labelContent {
-  transform: translateY(-100%);
-  color: $color1;
-}
+
 @media screen and (min-width: 768px) {
   #formWrap {
     display: flex;

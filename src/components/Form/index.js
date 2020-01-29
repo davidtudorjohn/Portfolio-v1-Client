@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { authenticated } from "../../actions";
 import Message from "../Message";
 import PasswordVis from "../PasswordVis";
+import FormInput from "../FormInput";
 import "./form.scss";
 
 const Form = () => {
@@ -116,44 +117,30 @@ const Form = () => {
   return isLogIn ? (
     <div id="formWrap">
       {registeredMsg ? <Message content="Registration successful" /> : ""}
-
       {logInFailMsg ? <Message content="Invalid email or password" /> : ""}
+
       <form id="logInForm" autoComplete="off" name="logInForm">
         <h2 id="formTitle">Log In</h2>
         <br />
-        <div className="inputWrap">
-          <input
-            form="logInForm"
-            className="formInput"
-            id="emailInput"
-            type="text/email"
-            name="email"
-            autoComplete="off"
-            value={userEmail}
-            onChange={handleEmail}
-            required={true}
-          />
-          <label htmlFor="emailInput" className="inputLabel">
-            <span className="labelContent">Email</span>
-          </label>
-        </div>
-        <div className="inputWrap">
-          <input
-            form="logInForm"
-            className="formInput"
-            id="passwordInput"
-            type={isPasswordVisible ? "text" : "password"}
-            name="password"
-            autoComplete="new-password"
-            value={userPassword}
-            onChange={handlePassword}
-            required={true}
-          />
-          <label htmlFor="passwordInput" className="inputLabel">
-            <span className="labelContent">Password</span>
-          </label>
-        </div>
+        <FormInput
+          form="loginForm"
+          id="emailInput"
+          type="text/email"
+          name="email"
+          value={userEmail}
+          onChange={handleEmail}
+          labelContent="Email"
+        />
 
+        <FormInput
+          form="loginForm"
+          id="passwordInput"
+          type={isPasswordVisible ? "text" : "password"}
+          name="password"
+          value={userPassword}
+          onChange={handlePassword}
+          labelContent="Password"
+        />
         <input
           type="submit"
           form="logInForm"
@@ -182,55 +169,34 @@ const Form = () => {
       <form id="registerForm" autoComplete="off" name="registerForm">
         <h2 id="formTitle">Register</h2>
         <br />
-        <div className="inputWrap">
-          <input
-            form="registerForm"
-            id="nameInput"
-            className="formInput"
-            type="text"
-            name="name"
-            autoComplete="off"
-            value={username}
-            onChange={handleUsername}
-            required={true}
-          />
-          <label htmlFor="nameInput" className="inputLabel">
-            <span className="labelContent">Name</span>
-          </label>
-        </div>
-        <div className="inputWrap">
-          <input
-            form="registerForm"
-            className="formInput"
-            id="emailInput"
-            type="text/email"
-            name="email"
-            autoComplete="off"
-            value={userEmail}
-            onChange={handleEmail}
-            required={true}
-          />
-          <label htmlFor="emailInput" className="inputLabel">
-            <span className="labelContent">Email</span>
-          </label>
-        </div>
-        <div className="inputWrap">
-          <input
-            form="registerForm"
-            className="formInput"
-            id="passwordInput"
-            type={isPasswordVisible ? "text" : "password"}
-            name="password"
-            autoComplete="new-password"
-            value={userPassword}
-            onChange={handlePassword}
-            required={true}
-          />
-          <label htmlFor="passwordInput" className="inputLabel">
-            <span className="labelContent">Password</span>
-          </label>
-        </div>
+        <FormInput
+          form="registerForm"
+          id="nameInput"
+          type="text"
+          name="name"
+          value={username}
+          onChange={handleUsername}
+          labelContent="Name"
+        />
+        <FormInput
+          form="registerForm"
+          id="emailInput"
+          type="text/email"
+          name="email"
+          value={userEmail}
+          onChange={handleEmail}
+          labelContent="Email"
+        />
 
+        <FormInput
+          form="registerForm"
+          id="passwordInput"
+          type={isPasswordVisible ? "text" : "password"}
+          name="password"
+          value={userPassword}
+          onChange={handlePassword}
+          labelContent="Password"
+        />
         <input
           type="submit"
           form="registerForm"
