@@ -94,11 +94,11 @@ const Form = () => {
       body: JSON.stringify(user)
     })
       .then(res => {
-        console.log(res, res.headers);
+        console.log(res);
         // let token = res.headers["auth-token"];
         if (res.status === 200) {
           handleIsLoggedIn();
-          localStorage.setItem("auth-token", "token");
+          localStorage.setItem("auth-token", res.headers.get("auth-token"));
         } else {
           handleLogInFailMsg();
         }

@@ -8,13 +8,20 @@ import Skew from "./components/Skew";
 import Footer from "./components/Footer";
 import Form from "./components/Form";
 import More from "./components/More";
+import { useSelector, useDispatch } from "react-redux";
+import { authenticated } from "./actions/index";
+
 function App() {
+  const isLoggedIn = useSelector(state => state.isLoggedIn);
+  const dispatch = useDispatch();
   const [isLoading, setIsLoading] = useState(true);
   // eslint-disable-next-line
   useEffect(() => {
     setIsLoading(() => !isLoading);
   }, []);
-
+  if (localStorage.getItem("auth-token") && !isLoggedIn) {
+    dispatch(authenticated());
+  }
   return isLoading ? (
     <h6 className="loading">Loading...</h6>
   ) : (
