@@ -9,12 +9,24 @@
   background-color: #cccccc50;
 }
 
+.featureWrap.dark {
+  border: solid 2px #63e029;
+}
+
 .feature {
   color: slateblue;
   letter-spacing: -0.05em;
 }
 
+.feature.dark {
+  color: #63e029;
+}
+
 .tool {
   letter-spacing: -0.05em;
+}
+
+.tool.dark {
+  color: white;
 }
 /*# sourceMappingURL=feature.css.map */

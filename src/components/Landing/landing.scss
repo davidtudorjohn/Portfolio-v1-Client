@@ -17,7 +17,7 @@
 }
 
 #col1 {
-  background-color: #eeeeee;
+  background-color: $colorBG;
   width: 100vw;
   min-height: 80vh;
   display: flex;
@@ -25,13 +25,18 @@
   align-items: $cen;
   text-align: $cen;
 }
-
+#col1.dark {
+  background-color: $colorBGdark;
+}
 #col2 {
-  background-color: #eee;
+  background-color: $colorBG;
   width: 100vw;
   display: flex;
   align-items: $cen;
   padding: 0em 2em;
+}
+#col2.dark {
+  background-color: $colorBGdark;
 }
 #landingContent {
   animation: grow 1.4s;
@@ -41,6 +46,11 @@
   padding: 2em;
   position: relative;
   margin: 0vh 7vw 5vh 7vw;
+  transition: border 0.4s ease-in-out;
+}
+#landingContent.dark {
+  background-color: $colorBGdark;
+  border: solid 5px $color1dark;
 }
 #learnMoreWrap {
   display: inline-flex;
@@ -55,12 +65,24 @@
     text-decoration-color: $color1;
   }
 }
+#learnMore.dark {
+  color: white;
+  &:hover {
+    text-decoration-color: $color1dark;
+  }
+}
 #faArrowRight {
   color: $color1;
+}
+#faArrowRight.dark {
+  color: $color1dark;
 }
 #landingContent > h2 {
   color: $color1;
   letter-spacing: -0.06em;
+}
+#landingContent > h2.dark {
+  color: $color1dark;
 }
 #likeBtn {
   padding-top: 0.3em;
@@ -68,6 +90,9 @@
   outline: none;
   border: none;
   background-color: rgba(0, 0, 0, 0);
+}
+#likeBtn.dark {
+  color: white;
 }
 .heartRed {
   color: red;
@@ -77,6 +102,9 @@
 }
 #subHead {
   padding: 1em 0em;
+}
+#subHead.dark {
+  color: white;
 }
 
 @media screen and (min-width: 768px) {
@@ -97,6 +125,9 @@
     width: 50vw;
     justify-content: $cen;
     padding-left: 0;
+  }
+  #col2.dark {
+    background: $colorBGdarkAlt;
   }
   #landingContent {
     margin-right: 7vw;

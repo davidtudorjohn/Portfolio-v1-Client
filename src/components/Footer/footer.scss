@@ -3,6 +3,10 @@
   height: 72px;
   border-top: solid 0.5px #bebebe;
 }
+#footerWrap.dark {
+  background-color: $colorBGdark;
+  border-top: solid 0.5px #5f5f5f;
+}
 #logoFooter {
   font-size: 1.6em;
   font-weight: 700;
@@ -20,4 +24,7 @@
   line-height: 72px;
   position: absolute;
   left: 7vw;
+}
+#footerText.dark {
+  color: white;
 }

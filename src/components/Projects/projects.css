@@ -62,6 +62,10 @@
           justify-content: center;
 }
 
+#projectsSection.dark {
+  background-color: #222222;
+}
+
 #projectsWrap {
   background-color: #eee;
   display: -webkit-box;
@@ -83,6 +87,10 @@
           align-items: center;
 }
 
+#projectsWrap.dark {
+  background-color: #222222;
+}
+
 #projectsHeading {
   -webkit-animation: bounce 1.4s ease-in-out infinite;
           animation: bounce 1.4s ease-in-out infinite;
@@ -92,6 +100,10 @@
   letter-spacing: -0.1em;
   color: slateblue;
   font-size: xx-large;
+}
+
+#projectsHeading.dark {
+  color: #63e029;
 }
 
 @media screen and (min-width: 768px) {

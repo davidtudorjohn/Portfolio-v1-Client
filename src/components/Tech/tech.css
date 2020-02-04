@@ -11,6 +11,13 @@
   margin-bottom: 0.5em;
 }
 
+.tech.dark {
+  -webkit-transition: border 0.4s ease-in-out;
+  transition: border 0.4s ease-in-out;
+  color: white;
+  border: solid 2px #63e029;
+}
+
 .tech:hover {
   background-color: #cccccc50;
 }

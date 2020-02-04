@@ -27,6 +27,9 @@
   width: 100vw;
   justify-content: center;
 }
+#projectsSection.dark {
+  background-color: $colorBGdark;
+}
 #projectsWrap {
   background-color: $colorBG;
   display: flex;
@@ -38,6 +41,9 @@
   justify-content: center;
   align-items: center;
 }
+#projectsWrap.dark {
+  background-color: $colorBGdark;
+}
 #projectsHeading {
   animation: bounce 1.4s ease-in-out infinite;
   text-align: center;
@@ -46,6 +52,9 @@
   letter-spacing: -0.1em;
   color: $color1;
   font-size: xx-large;
+}
+#projectsHeading.dark {
+  color: $color1dark;
 }
 
 @media screen and (min-width: 768px) {

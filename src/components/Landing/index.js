@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./landing.scss";
 import Profile from "../Profile";
@@ -8,24 +8,30 @@ import { like } from "../../actions";
 import { useDispatch, useSelector } from "react-redux";
 import Techs from "../Techs";
 const Landing = () => {
-  // const [isLiked, setIsLiked] = useState(false);
-  const isLiked = useSelector(state => state.isLiked);
-  const dispatch = useDispatch();
+  const [isLiked, setIsLiked] = useState(false);
+  const isDarkMode = useSelector(state => state.isDarkMode);
   return (
     <div id="landing">
-      <div id="col1">
+      <div id="col1" className={isDarkMode ? "dark" : ""}>
         <Profile />
       </div>
-      <div id="col2">
-        <div id="landingContent">
-          <h2>Hello world!</h2>
-          <p id="subHead">
+      <div id="col2" className={isDarkMode ? "dark" : ""}>
+        <div id="landingContent" className={isDarkMode ? "dark" : ""}>
+          <h2 className={isDarkMode ? "dark" : ""}>Hello world!</h2>
+          <p id="subHead" className={isDarkMode ? "dark" : ""}>
             I develop things for the web using state-of-the-art technologies.
           </p>
           <Link to="/more">
             <div id="learnMoreWrap">
-              <FontAwesomeIcon id="faArrowRight" icon={faArrowRight} />
-              <p id="learnMore"> Learn more</p>
+              <FontAwesomeIcon
+                id="faArrowRight"
+                icon={faArrowRight}
+                className={isDarkMode ? "dark" : ""}
+              />
+              <p id="learnMore" className={isDarkMode ? "dark" : ""}>
+                {" "}
+                Learn more
+              </p>
               <br />
               <br />
             </div>
@@ -49,9 +55,11 @@ const Landing = () => {
             ]}
           />
           <br />
-          <button id="likeBtn" onClick={() => dispatch(like())}>
-            {/* onClick={() => setIsLiked(!isLiked)}
-          > */}
+          <button
+            id="likeBtn"
+            className={isDarkMode ? "dark" : ""}
+            onClick={() => setIsLiked(!isLiked)}
+          >
             <FontAwesomeIcon
               icon={faHeart}
               id="faHeart"

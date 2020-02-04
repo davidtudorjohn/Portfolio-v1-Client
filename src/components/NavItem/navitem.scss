@@ -12,14 +12,25 @@
   color: black;
   transition: color 0.4s ease-in-out;
 }
+.navItem.dark > a {
+  color: white;
+}
 .navItem > a:hover,
 .navItem > a:focus {
   color: $color1;
+}
+.navItem.dark > a:hover,
+.navItem.dark > a:focus {
+  color: $color1dark;
 }
 .navItem:hover,
 .navItem:focus {
   transition: border-bottom 0.4s ease-in-out;
   border-bottom: solid 2px $color1;
+}
+.navItem.dark:hover,
+.navItem.dark:focus {
+  border-bottom: solid 2px $color1dark;
 }
 .mobileItem {
   text-align: center;
@@ -37,15 +48,29 @@
   color: black;
   transition: color 0.4s ease-in-out;
 }
+.mobileItem.dark > a {
+  color: white;
+}
+
 .mobileItem > a:hover,
 .mobileItem > a:focus {
   color: $color1;
 }
+.mobileItem.dark > a:hover,
+.mobileItem.dark > a:focus {
+  color: $color1dark;
+}
+
 .mobileItem:hover,
 .mobileItem:focus {
   background-color: #bebebe20;
   border-bottom: solid 2px $color1;
 }
+.mobileItem.dark:hover,
+.mobileItem.dark:focus {
+  border-bottom: solid 2px $color1dark;
+}
+
 @media screen and (min-width: 768px) {
   .navItem {
     display: block;

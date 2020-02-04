@@ -34,6 +34,16 @@
   text-decoration: underline;
   -webkit-text-decoration-color: slateblue;
           text-decoration-color: slateblue;
+  -webkit-transition: -webkit-text-decoration-color 0.4s ease-in-out;
+  transition: -webkit-text-decoration-color 0.4s ease-in-out;
+  transition: text-decoration-color 0.4s ease-in-out;
+  transition: text-decoration-color 0.4s ease-in-out, -webkit-text-decoration-color 0.4s ease-in-out;
+}
+
+#heading.dark {
+  -webkit-text-decoration-color: #63e029;
+          text-decoration-color: #63e029;
+  color: white;
 }
 
 #location {
@@ -49,6 +59,10 @@
       -ms-flex-align: center;
           align-items: center;
   padding-top: 0.5em;
+}
+
+#location > p.dark {
+  color: white;
 }
 
 #col1Content {
@@ -72,11 +86,20 @@
   border: solid 5px slateblue;
 }
 
+#portrait.dark {
+  border: solid 5px #63e029;
+}
+
 #portrait:hover {
   margin-top: -3px;
   margin-bottom: 3px;
   -webkit-box-shadow: #30303060 0em 0.5em 1em 0.5em;
           box-shadow: #30303060 0em 0.5em 1em 0.5em;
+}
+
+#portrait.dark:hover {
+  -webkit-box-shadow: #5f5f5f40 0em 0.5em 1em 0.5em;
+          box-shadow: #5f5f5f40 0em 0.5em 1em 0.5em;
 }
 
 #faMapMarkerAlt {

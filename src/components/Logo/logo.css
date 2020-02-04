@@ -1,6 +1,5 @@
 #logo {
   z-index: 101;
-  color: black;
   font-size: 1.6em;
   font-weight: 700;
   font-style: italic;
@@ -8,8 +7,21 @@
   position: absolute;
   line-height: 72px;
   text-decoration: underline;
+  color: black;
   -webkit-text-decoration-color: slateblue;
           text-decoration-color: slateblue;
+  -webkit-transition: color 0.4s ease-in-out;
+  transition: color 0.4s ease-in-out;
+  -webkit-transition: -webkit-text-decoration 0.4s ease-in-out;
+  transition: -webkit-text-decoration 0.4s ease-in-out;
+  transition: text-decoration 0.4s ease-in-out;
+  transition: text-decoration 0.4s ease-in-out, -webkit-text-decoration 0.4s ease-in-out;
+}
+
+#logo.dark {
+  color: white;
+  -webkit-text-decoration-color: #63e029;
+          text-decoration-color: #63e029;
 }
 
 .left {

@@ -6,6 +6,12 @@ input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
   -webkit-box-shadow: 0 0 0 30px $colorBG inset !important;
 }
+input.dark:-webkit-autofill,
+input.dark:-webkit-autofill:hover,
+input.dark:-webkit-autofill:focus,
+input.dark:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px $colorBGdark inset !important;
+}
 .inputWrap {
   display: flex;
   position: relative;
@@ -15,6 +21,9 @@ input:-webkit-autofill:active {
   margin-bottom: 1em;
   background-color: $colorBG;
 }
+// .inputWrap.dark {
+//   background-color: $colorBGdark;
+// }
 .inputLabel {
   pointer-events: none;
   position: absolute;
@@ -23,6 +32,10 @@ input:-webkit-autofill:active {
   height: 100%;
   border-bottom: solid 1px black;
   width: 100%;
+}
+.inputLabel.dark {
+  color: white;
+  border-bottom: solid 1px white;
 }
 .inputLabel::after {
   content: "";
@@ -33,6 +46,10 @@ input:-webkit-autofill:active {
   border-bottom: solid 3px $color1;
   transform: translateX(-100%);
   transition: transform 0.3s ease-in-out;
+}
+.inputLabel.dark::after {
+  border-bottom: solid 3px $color1dark;
+  transform: translateX(-100%);
 }
 .labelContent {
   font-weight: 600;
@@ -53,6 +70,10 @@ input:-webkit-autofill:active {
   border: none;
   outline: none;
 }
+.formInput.dark {
+  background-color: $colorBGdark;
+  color: white;
+}
 .formInput:focus + .inputLabel::after,
 .formInput:valid + .inputLabel::after {
   transform: translateX(0%);
@@ -61,4 +82,8 @@ input:-webkit-autofill:active {
 .formInput:valid + .inputLabel .labelContent {
   transform: translateY(-100%);
   color: $color1;
+}
+.formInput.dark:focus + .inputLabel .labelContent,
+.formInput.dark:valid + .inputLabel .labelContent {
+  color: $color1dark;
 }

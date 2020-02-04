@@ -3,6 +3,11 @@ export const like = () => {
     type: "LIKE"
   };
 };
+export const darkMode = () => {
+  return {
+    type: "DARK_MODE"
+  };
+};
 export const authenticated = () => {
   return {
     type: "AUTHENTICATED"

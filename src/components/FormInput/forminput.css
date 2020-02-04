@@ -5,6 +5,13 @@ input:-webkit-autofill:active {
   -webkit-box-shadow: 0 0 0 30px #eee inset !important;
 }
 
+input.dark:-webkit-autofill,
+input.dark:-webkit-autofill:hover,
+input.dark:-webkit-autofill:focus,
+input.dark:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px #222222 inset !important;
+}
+
 .inputWrap {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -34,6 +41,11 @@ input:-webkit-autofill:active {
   width: 100%;
 }
 
+.inputLabel.dark {
+  color: white;
+  border-bottom: solid 1px white;
+}
+
 .inputLabel::after {
   content: "";
   position: absolute;
@@ -47,6 +59,12 @@ input:-webkit-autofill:active {
   transition: -webkit-transform 0.3s ease-in-out;
   transition: transform 0.3s ease-in-out;
   transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+
+.inputLabel.dark::after {
+  border-bottom: solid 3px #63e029;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
 }
 
 .labelContent {
@@ -71,6 +89,11 @@ input:-webkit-autofill:active {
   outline: none;
 }
 
+.formInput.dark {
+  background-color: #222222;
+  color: white;
+}
+
 .formInput:focus + .inputLabel::after,
 .formInput:valid + .inputLabel::after {
   -webkit-transform: translateX(0%);
@@ -82,5 +105,10 @@ input:-webkit-autofill:active {
   -webkit-transform: translateY(-100%);
           transform: translateY(-100%);
   color: slateblue;
+}
+
+.formInput.dark:focus + .inputLabel .labelContent,
+.formInput.dark:valid + .inputLabel .labelContent {
+  color: #63e029;
 }
 /*# sourceMappingURL=forminput.css.map */

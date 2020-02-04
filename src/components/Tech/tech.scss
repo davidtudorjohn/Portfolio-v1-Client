@@ -9,6 +9,12 @@
   margin-right: 0.5em;
   margin-bottom: 0.5em;
 }
+.tech.dark {
+  transition: border 0.4s ease-in-out;
+
+  color: white;
+  border: solid 2px $color1dark;
+}
 .tech:hover {
   background-color: #cccccc50;
 }

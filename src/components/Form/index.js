@@ -8,6 +8,7 @@ import "./form.scss";
 
 const Form = () => {
   const isLoggedIn = useSelector(state => state.isLoggedIn);
+  const isDarkMode = useSelector(state => state.isDarkMode);
   const dispatch = useDispatch();
   // const [isLoggedIn, setIsLoggedIn] = useState(false);
 
@@ -120,7 +121,9 @@ const Form = () => {
       {logInFailMsg ? <Message content="Invalid email or password" /> : ""}
 
       <form id="logInForm" autoComplete="off" name="logInForm">
-        <h2 id="formTitle">Log In</h2>
+        <h2 id="formTitle" className={isDarkMode ? "dark" : ""}>
+          Log In
+        </h2>
         <br />
         <FormInput
           form="loginForm"
@@ -146,15 +149,21 @@ const Form = () => {
           form="logInForm"
           value="Log In"
           id="formSubmit"
+          className={isDarkMode ? "dark" : ""}
           onClick={handleLogin}
         ></input>
 
         <PasswordVis
           action={handlePasswordVis}
           visibility={isPasswordVisible}
+          class={isDarkMode ? "dark" : ""}
         />
         <br />
-        <button id="loginOrRegister" onClick={handleFormToggle}>
+        <button
+          id="loginOrRegister"
+          className={isDarkMode ? "dark" : ""}
+          onClick={handleFormToggle}
+        >
           Or Register
         </button>
       </form>
@@ -167,7 +176,9 @@ const Form = () => {
         ""
       )}
       <form id="registerForm" autoComplete="off" name="registerForm">
-        <h2 id="formTitle">Register</h2>
+        <h2 id="formTitle" className={isDarkMode ? "dark" : ""}>
+          Register
+        </h2>
         <br />
         <FormInput
           form="registerForm"
@@ -198,6 +209,7 @@ const Form = () => {
           labelContent="Password"
         />
         <input
+          className={isDarkMode ? "dark" : ""}
           type="submit"
           form="registerForm"
           value="Register"
@@ -208,9 +220,14 @@ const Form = () => {
         <PasswordVis
           action={handlePasswordVis}
           visibility={isPasswordVisible}
+          class={isDarkMode ? "dark" : ""}
         />
         <br />
-        <button id="loginOrRegister" onClick={handleFormToggle}>
+        <button
+          id="loginOrRegister"
+          className={isDarkMode ? "dark" : ""}
+          onClick={handleFormToggle}
+        >
           Or Log In
         </button>
       </form>

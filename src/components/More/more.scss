@@ -8,6 +8,10 @@
   text-align: $cen;
   position: absolute;
   padding: 2em 0em;
+  height: 240vh;
+}
+#moreWrap.dark {
+  background-color: $colorBGdark;
 }
 #backBtn {
   display: inline-flex;
@@ -24,11 +28,25 @@
     outline: auto;
   }
 }
+#backBtn.dark {
+  color: white;
+  &:hover {
+    text-decoration: underline;
+    text-decoration-color: $color1dark;
+  }
+}
 #backBtnText {
   margin-left: 0.2em;
 }
+// #backBtnText.dark {
+//   color: white;
+// }
+
 #faArrowLeft {
   color: $color1;
+}
+#faArrowLeft.dark {
+  color: $color1dark;
 }
 #moreCol1 {
   min-width: 70vw;
@@ -36,23 +54,35 @@
   overflow: hidden;
   margin-bottom: -1em;
 }
+#moreCol1.dark {
+  background-color: $colorBGdark;
+}
 #moreCol2 {
   min-width: 70vw;
   max-width: 70vw;
   overflow: hidden;
 }
+#moreCol2.dark {
+  background-color: $colorBGdark;
+}
 @media screen and (min-width: 768px) {
+  #moreWrap {
+    height: 140vh;
+    overflow: hidden;
+  }
   #moreCol1 {
     position: absolute;
     left: 7vw;
     min-width: 40vw;
     max-width: 40vw;
+    height: 130vh;
   }
   #moreCol2 {
     position: absolute;
     right: 7vw;
     min-width: 40vw;
     max-width: 40vw;
+    height: 130vh;
   }
 }
 @media screen and (min-width: 1080px) {

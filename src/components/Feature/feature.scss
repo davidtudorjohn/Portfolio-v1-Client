@@ -8,12 +8,21 @@
     background-color: #cccccc50;
   }
 }
+.featureWrap.dark {
+  border: solid 2px $color1dark;
+}
 .feature {
   color: $color1;
   letter-spacing: -0.05em;
 }
+.feature.dark {
+  color: $color1dark;
+}
 .tool {
   letter-spacing: -0.05em;
+}
+.tool.dark {
+  color: white;
 }
 
 @media screen and (min-width: 768px) {

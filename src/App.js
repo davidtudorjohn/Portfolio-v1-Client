@@ -14,6 +14,7 @@ import { authenticated } from "./actions/index";
 function App() {
   const isLoggedIn = useSelector(state => state.isLoggedIn);
   const dispatch = useDispatch();
+  const isDarkMode = useSelector(state => state.isDarkMode);
   const [isLoading, setIsLoading] = useState(true);
   // eslint-disable-next-line
   useEffect(() => {
@@ -27,7 +28,7 @@ function App() {
   ) : (
     <Router onUpdate={() => window.scrollTo(0, 0)}>
       <Switch>
-        <div className="App">
+        <div className={isDarkMode ? "App dark" : "App"}>
           <Header />
           <Route path="/" exact component={Landing} />
           <Route path="/" exact component={Projects} />

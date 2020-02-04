@@ -1,15 +1,22 @@
 @import "../../main";
 #logo {
   z-index: 101;
-  color: black;
   font-size: 1.6em;
   font-weight: 700;
   font-style: italic;
   letter-spacing: -0.05em;
   position: absolute;
+  // vertical-align: center;
   line-height: 72px;
   text-decoration: underline;
+  color: black;
   text-decoration-color: $color1;
+  transition: color 0.4s ease-in-out;
+  transition: text-decoration 0.4s ease-in-out;
+}
+#logo.dark {
+  color: white;
+  text-decoration-color: $color1dark;
 }
 .left {
   left: 7vw;

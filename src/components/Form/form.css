@@ -28,88 +28,15 @@ input:-webkit-autofill:active {
   letter-spacing: -0.05em;
 }
 
-.inputWrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: relative;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  margin-bottom: 1em;
-  background-color: #eee;
+#formTitle.dark {
+  color: white;
+  -webkit-text-decoration-color: #63e029;
+          text-decoration-color: #63e029;
 }
 
 #formWrap > form {
   position: relative;
   width: 100%;
-}
-
-.inputLabel {
-  pointer-events: none;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 100%;
-  border-bottom: solid 1px black;
-  width: 100%;
-}
-
-.inputLabel::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  border-bottom: solid 3px slateblue;
-  -webkit-transform: translateX(-100%);
-          transform: translateX(-100%);
-  -webkit-transition: -webkit-transform 0.3s ease-in-out;
-  transition: -webkit-transform 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
-}
-
-.labelContent {
-  font-weight: 600;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  pointer-events: none;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-}
-
-.formInput {
-  font-size: 15px;
-  font-weight: 500;
-  left: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0);
-  width: 100%;
-  padding-top: 2em;
-  border: none;
-  outline: none;
-}
-
-#faEye {
-  color: slateblue;
-}
-
-#showHidePassword {
-  z-index: 99;
-  color: slateblue;
-  background: transparent;
-  border: solid 1px slateblue;
-  float: right;
-  text-align: right;
 }
 
 #formSubmit {
@@ -126,11 +53,20 @@ input:-webkit-autofill:active {
   margin: 1em 0em;
 }
 
+#formSubmit.dark {
+  color: #63e029;
+  border: solid 2px #63e029;
+}
+
 #loginOrRegister {
   border: none;
   color: slateblue;
   font-weight: 600;
   background: rgba(0, 0, 0, 0);
+}
+
+#loginOrRegister.dark {
+  color: #63e029;
 }
 
 #formSubmit:hover,
@@ -139,17 +75,9 @@ input:-webkit-autofill:active {
   color: white;
 }
 
-.formInput:focus + .inputLabel::after,
-.formInput:valid + .inputLabel::after {
-  -webkit-transform: translateX(0%);
-          transform: translateX(0%);
-}
-
-.formInput:focus + .inputLabel .labelContent,
-.formInput:valid + .inputLabel .labelContent {
-  -webkit-transform: translateY(-100%);
-          transform: translateY(-100%);
-  color: slateblue;
+#formSubmit.dark:hover,
+#formSubmit.dark:focus {
+  background-color: #63e029;
 }
 
 @media screen and (min-width: 768px) {

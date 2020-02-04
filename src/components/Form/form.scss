@@ -19,6 +19,10 @@ input:-webkit-autofill:active {
   text-decoration-color: $color1;
   letter-spacing: -0.05em;
 }
+#formTitle.dark {
+  color: white;
+  text-decoration-color: $color1dark;
+}
 #formWrap > form {
   position: relative;
   width: 100%;
@@ -37,16 +41,27 @@ input:-webkit-autofill:active {
   outline: none;
   margin: 1em 0em;
 }
+#formSubmit.dark {
+  color: $color1dark;
+  border: solid 2px $color1dark;
+}
 #loginOrRegister {
   border: none;
   color: $color1;
   font-weight: 600;
   background: $transp;
 }
+#loginOrRegister.dark {
+  color: $color1dark;
+}
 #formSubmit:hover,
 #formSubmit:focus {
   background-color: $color1;
   color: white;
+}
+#formSubmit.dark:hover,
+#formSubmit.dark:focus {
+  background-color: $color1dark;
 }
 
 @media screen and (min-width: 768px) {
