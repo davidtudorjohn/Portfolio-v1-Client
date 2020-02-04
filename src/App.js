@@ -12,7 +12,6 @@ import { useSelector, useDispatch } from "react-redux";
 import { authenticated } from "./actions/index";
 
 function App() {
-  const isLoggedIn = useSelector(state => state.isLoggedIn);
   const dispatch = useDispatch();
   const isDarkMode = useSelector(state => state.isDarkMode);
   const [isLoading, setIsLoading] = useState(true);
