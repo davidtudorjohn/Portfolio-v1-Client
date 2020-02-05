@@ -5,7 +5,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  min-height: 90vh;
+  min-height: 70vh;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -54,6 +54,9 @@ hr {
 @media screen and (min-width: 768px) {
   #skewWrap h2 {
     font-size: 56px;
+  }
+  #skewWrap {
+    min-height: 80vh;
   }
 }
 /*# sourceMappingURL=skew.css.map */

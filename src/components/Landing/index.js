@@ -4,8 +4,7 @@ import "./landing.scss";
 import Profile from "../Profile";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart, faArrowRight } from "@fortawesome/free-solid-svg-icons";
-import { like } from "../../actions";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import Techs from "../Techs";
 const Landing = () => {
   const [isLiked, setIsLiked] = useState(false);

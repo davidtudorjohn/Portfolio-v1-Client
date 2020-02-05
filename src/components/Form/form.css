@@ -16,9 +16,10 @@ input:-webkit-autofill:active {
       -ms-flex-align: center;
           align-items: center;
   padding: 2em 0em;
+  margin-bottom: 10vh;
   overflow: hidden;
   width: 80vw;
-  min-height: 70vh;
+  min-height: 60vh;
 }
 
 #formTitle {

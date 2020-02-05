@@ -1,5 +1,4 @@
 const value = localStorage.getItem("Dark Mode");
-// console.log(value);
 
 const darkReducer = (state = value || false, action) => {
   switch (action.type) {

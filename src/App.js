@@ -14,16 +14,17 @@ import { authenticated } from "./actions/index";
 function App() {
   const dispatch = useDispatch();
   const isDarkMode = useSelector(state => state.isDarkMode);
+  const isLoggedIn = useSelector(state => state.isLoggedIn);
   const [isLoading, setIsLoading] = useState(true);
   // eslint-disable-next-line
   useEffect(() => {
     setIsLoading(() => !isLoading);
   }, []);
-  if (localStorage.getItem("auth-token") && !isLoggedIn) {
+  if (localStorage.getItem("auth-token") && isLoggedIn === false) {
     dispatch(authenticated());
   }
   return isLoading ? (
-    <h6 className="loading">Loading...</h6>
+    <h6 className={isDarkMode ? "loading dark" : "loading"}>Loading...</h6>
   ) : (
     <Router onUpdate={() => window.scrollTo(0, 0)}>
       <Switch>

@@ -12,6 +12,7 @@ import {
   faSun
 } from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { Switch } from "@material-ui/core";
 import { useSelector, useDispatch } from "react-redux";
 import { logout, darkMode } from "../../actions";
 const Header = () => {
@@ -30,10 +31,16 @@ const Header = () => {
     setLoggedOutMsg(true);
     setTimeout(() => setLoggedOutMsg(false), 3000);
   };
-  console.log(`Is dark mode : ${isDarkMode}`);
   return (
-    <div>
-      {loggedOutMsg ? <Message content="Log Out Successful" /> : ""}
+    <>
+      {loggedOutMsg ? (
+        <Message
+          content="Log Out Successful"
+          class={isDarkMode ? "dark" : ""}
+        />
+      ) : (
+        ""
+      )}
       <div id="header" className={isDarkMode ? "dark" : ""}>
         <Logo position="left" class={isDarkMode ? "dark" : ""} />
         <nav>
@@ -62,17 +69,18 @@ const Header = () => {
               content=" (678)-699-4962"
               class={isDarkMode ? "navItem dark" : "navItem"}
             />
+            {/* <Switch id="darkModeSwitch" onChange={() => dispatch(darkMode())} /> */}
             <div
               id="darkModeToggle"
               className={isDarkMode ? "dark" : ""}
               onClick={() => dispatch(darkMode())}
             >
               {isDarkMode ? (
-                <FontAwesomeIcon icon={faSun} />
+                <FontAwesomeIcon icon={faSun} id="faSun" />
               ) : (
-                <FontAwesomeIcon icon={faMoon} />
+                <FontAwesomeIcon icon={faMoon} id="faMoon" />
               )}
-              {isDarkMode ? " Light Mode" : " Dark Mode"}
+              {/* {isDarkMode ? " Light Mode" : " Dark Mode"} */}
             </div>
             {isLoggedIn ? (
               <NavItem
@@ -140,7 +148,7 @@ const Header = () => {
           </ul>
         </nav>
       </div>
-    </div>
+    </>
   );
 };
 export default Header;

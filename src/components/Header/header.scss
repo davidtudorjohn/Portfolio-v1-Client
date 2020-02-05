@@ -14,7 +14,10 @@
   background-color: $colorBGdark;
   border-bottom: solid 0.5px #5f5f5f;
 }
-
+#darkModeSwitch {
+  line-height: 72px;
+  margin-bottom: -1.2em;
+}
 #darkModeToggle {
   z-index: 101;
   cursor: pointer;
@@ -23,11 +26,19 @@
   right: 15vw;
   padding-left: 0.6em;
   transition: color 0.4s ease-in-out;
+  font-size: 1.3em;
 }
 #darkModeToggle.dark {
   color: white;
 }
-
+#faSun:hover {
+  transition: color 0.4s ease-in-out;
+  color: $color1dark;
+}
+#faMoon:hover {
+  transition: color 0.4s ease-in-out;
+  color: $color1;
+}
 #logOutBtn {
   color: $color1;
   border: none;
@@ -40,7 +51,7 @@
   outline: none;
   cursor: pointer;
   position: absolute;
-  line-height: 72px;
+  line-height: 68px;
   right: 7vw;
   font-size: 18px;
 }

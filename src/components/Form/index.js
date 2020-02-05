@@ -39,19 +39,29 @@ const Form = () => {
     dispatch(authenticated());
     // setIsLoggedIn(true);
   };
+  const clearMessages = () => {
+    setLoggedInMsg(false);
+    setLogInFailMsg(false);
+    setRegisteredMsg(false);
+    setRegisterFailMsg(false);
+  };
   const handleLoggedInMsg = e => {
+    clearMessages();
     setLoggedInMsg(true);
     setTimeout(() => setLoggedInMsg(false), 3000);
   };
   const handleLogInFailMsg = e => {
+    clearMessages();
     setLogInFailMsg(true);
     setTimeout(() => setLogInFailMsg(false), 3000);
   };
   const handleRegisteredMsg = e => {
+    clearMessages();
     setRegisteredMsg(true);
     setTimeout(() => setRegisteredMsg(false), 3000);
   };
   const handleRegisterFailMsg = e => {
+    clearMessages();
     setRegisterFailMsg(true);
     setTimeout(() => setRegisterFailMsg(false), 3000);
   };
@@ -108,7 +118,9 @@ const Form = () => {
   };
 
   if (loggedInMsg) {
-    return <Message content="Log in successful" />;
+    return (
+      <Message content="Log in successful" class={isDarkMode ? "dark" : ""} />
+    );
   }
 
   if (isLoggedIn) {
@@ -117,8 +129,22 @@ const Form = () => {
 
   return isLogIn ? (
     <div id="formWrap">
-      {registeredMsg ? <Message content="Registration successful" /> : ""}
-      {logInFailMsg ? <Message content="Invalid email or password" /> : ""}
+      {registeredMsg ? (
+        <Message
+          content="Registration successful"
+          class={isDarkMode ? "dark" : ""}
+        />
+      ) : (
+        ""
+      )}
+      {logInFailMsg ? (
+        <Message
+          content="Invalid email or password"
+          class={isDarkMode ? "dark" : ""}
+        />
+      ) : (
+        ""
+      )}
 
       <form id="logInForm" autoComplete="off" name="logInForm">
         <h2 id="formTitle" className={isDarkMode ? "dark" : ""}>
@@ -171,7 +197,10 @@ const Form = () => {
   ) : (
     <div id="formWrap">
       {registerFailMsg ? (
-        <Message content="Registration was unsuccessful. Please try again." />
+        <Message
+          content="Registration was unsuccessful. Please try again."
+          class={isDarkMode ? "dark" : ""}
+        />
       ) : (
         ""
       )}

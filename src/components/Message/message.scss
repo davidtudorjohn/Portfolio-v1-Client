@@ -11,3 +11,10 @@
   border: solid 2px $color1;
   border-radius: 5px;
 }
+#message.dark {
+  box-shadow: #00000040 0.2em 0.23em 0.2em;
+  color: $color1dark;
+  background-color: $colorBGdarkAlt;
+  border: solid 2px $color1dark;
+  box-shadow: #5f5f5f40 0.2em 0.23em 0.2em;
+}

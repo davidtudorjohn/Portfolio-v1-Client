@@ -3,7 +3,7 @@
   background-color: #eee;
   background: linear-gradient(to right, blueviolet, $color1, blueviolet);
   display: flex;
-  min-height: 90vh;
+  min-height: 70vh;
   justify-content: $cen;
   align-items: $cen;
   transform: skew(0deg, -10deg);
@@ -42,5 +42,8 @@ hr {
 @media screen and (min-width: 768px) {
   #skewWrap h2 {
     font-size: 56px;
+  }
+  #skewWrap {
+    min-height: 80vh;
   }
 }

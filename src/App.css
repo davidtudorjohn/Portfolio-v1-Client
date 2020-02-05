@@ -31,3 +31,7 @@ button:focus {
   align-items: center;
   height: 100vh;
 }
+.loading.dark {
+  background-color: #222222;
+  color: white;
+}
