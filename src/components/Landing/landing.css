@@ -27,7 +27,6 @@
 #landing {
   z-index: 0;
   position: relative;
-  margin-top: -0.23em;
 }
 
 #col1 {
@@ -163,6 +162,7 @@
     display: -ms-flexbox;
     display: flex;
     width: 100vw;
+    height: 90vh;
   }
   #col1 {
     width: 50vw;
@@ -195,6 +195,9 @@
 }
 
 @media screen and (min-width: 1080px) {
+  #landing {
+    height: 80vh;
+  }
   #landingContent {
     margin-right: 7vw;
     position: absolute;

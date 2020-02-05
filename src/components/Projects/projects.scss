@@ -23,25 +23,27 @@
 }
 
 #projectsSection {
+  display: unset;
   background-color: $colorBG;
   width: 100vw;
+  min-height: 100vh;
   justify-content: center;
 }
 #projectsSection.dark {
   background-color: $colorBGdark;
 }
-#projectsWrap {
+.projectsRow {
   background-color: $colorBG;
   display: flex;
   flex-direction: column;
   padding: 0em 2em 0em 2em;
   overflow-x: hidden;
-  width: 100vw;
+  max-width: 90vw;
   content: contain;
   justify-content: center;
   align-items: center;
 }
-#projectsWrap.dark {
+.projectsRow.dark {
   background-color: $colorBGdark;
 }
 #projectsHeading {
@@ -58,7 +60,12 @@
 }
 
 @media screen and (min-width: 768px) {
-  #projectsWrap {
+  #projectsSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .projectsRow {
     display: flex;
     flex-direction: row;
     align-items: unset;

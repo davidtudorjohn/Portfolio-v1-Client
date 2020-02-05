@@ -53,8 +53,8 @@ input.dark:-webkit-autofill:active {
   height: 100%;
   width: 100%;
   border-bottom: solid 3px slateblue;
-  -webkit-transform: translateX(-100%);
-          transform: translateX(-100%);
+  -webkit-transform: translateX(-101%);
+          transform: translateX(-101%);
   -webkit-transition: -webkit-transform 0.3s ease-in-out;
   transition: -webkit-transform 0.3s ease-in-out;
   transition: transform 0.3s ease-in-out;
@@ -63,8 +63,8 @@ input.dark:-webkit-autofill:active {
 
 .inputLabel.dark::after {
   border-bottom: solid 3px #63e029;
-  -webkit-transform: translateX(-100%);
-          transform: translateX(-100%);
+  -webkit-transform: translateX(-101%);
+          transform: translateX(-101%);
 }
 
 .labelContent {

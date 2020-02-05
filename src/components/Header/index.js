@@ -57,10 +57,15 @@ const Header = () => {
               content=" LinkedIn"
               class={isDarkMode ? "navItem dark" : "navItem"}
             />
+            {/* <NavItem
+              href="#"
+              content="Log In or Register"
+              class={isDarkMode ? "navItem dark" : "navItem"}
+            /> */}
             <NavItem
               href="mailto:davidjohn_atl@yahoo.com"
               icon={faEnvelopeSquare}
-              content=" Email me"
+              content=" Get in Touch"
               class={isDarkMode ? "navItem dark" : "navItem"}
             />
             <NavItem
@@ -127,7 +132,7 @@ const Header = () => {
             <NavItem
               href="mailto:davidjohn_atl@yahoo.com"
               icon={faEnvelopeSquare}
-              content=" Email me"
+              content=" Get in Touch"
               class={isDarkMode ? "mobileItem dark" : "mobileItem"}
             />
             <NavItem

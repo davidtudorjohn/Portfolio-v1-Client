@@ -21,9 +21,6 @@ input.dark:-webkit-autofill:active {
   margin-bottom: 1em;
   background-color: $colorBG;
 }
-// .inputWrap.dark {
-//   background-color: $colorBGdark;
-// }
 .inputLabel {
   pointer-events: none;
   position: absolute;
@@ -44,12 +41,12 @@ input.dark:-webkit-autofill:active {
   height: 100%;
   width: 100%;
   border-bottom: solid 3px $color1;
-  transform: translateX(-100%);
+  transform: translateX(-101%);
   transition: transform 0.3s ease-in-out;
 }
 .inputLabel.dark::after {
   border-bottom: solid 3px $color1dark;
-  transform: translateX(-100%);
+  transform: translateX(-101%);
 }
 .labelContent {
   font-weight: 600;
