@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 const Skew = () => {
   const isDarkMode = useSelector(state => state.isDarkMode);
   return (
-    <div id="skewWrap" className={isDarkMode ? "dark" : ""}>
+    <div id="skewWrap" className={isDarkMode && "dark"}>
       <h2>
         DESIGN
         <hr />

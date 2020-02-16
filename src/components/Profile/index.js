@@ -10,18 +10,18 @@ const Profile = () => {
     <div id="col1Content">
       <img
         id="portrait"
-        className={isDarkMode ? "dark" : ""}
+        className={isDarkMode && "dark"}
         src={david}
         alt="portrait"
       ></img>
       <div id="nameWrap">
-        <h1 id="heading" className={isDarkMode ? "dark" : ""}>
+        <h1 id="heading" className={isDarkMode && "dark"}>
           David Tudor John
         </h1>
       </div>
       <div id="location">
         <FontAwesomeIcon icon={faMapMarkerAlt} id="faMapMarkerAlt" />
-        <p className={isDarkMode ? "dark" : ""}>Atlanta, GA</p>
+        <p className={isDarkMode && "dark"}>Atlanta, GA</p>
       </div>
     </div>
   );

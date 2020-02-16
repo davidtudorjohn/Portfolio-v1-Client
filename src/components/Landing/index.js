@@ -11,13 +11,13 @@ const Landing = () => {
   const isDarkMode = useSelector(state => state.isDarkMode);
   return (
     <div id="landing">
-      <div id="col1" className={isDarkMode ? "dark" : ""}>
+      <div id="col1" className={isDarkMode && "dark"}>
         <Profile />
       </div>
-      <div id="col2" className={isDarkMode ? "dark" : ""}>
-        <div id="landingContent" className={isDarkMode ? "dark" : ""}>
-          <h2 className={isDarkMode ? "dark" : ""}>Hello world!</h2>
-          <p id="subHead" className={isDarkMode ? "dark" : ""}>
+      <div id="col2" className={isDarkMode && "dark"}>
+        <div id="landingContent" className={isDarkMode && "dark"}>
+          <h2 className={isDarkMode && "dark"}>Hello world!</h2>
+          <p id="subHead" className={isDarkMode && "dark"}>
             I develop things for the web using state-of-the-art technologies.
           </p>
           <Link to="/more">
@@ -25,9 +25,9 @@ const Landing = () => {
               <FontAwesomeIcon
                 id="faArrowRight"
                 icon={faArrowRight}
-                className={isDarkMode ? "dark" : ""}
+                className={isDarkMode && "dark"}
               />
-              <p id="learnMore" className={isDarkMode ? "dark" : ""}>
+              <p id="learnMore" className={isDarkMode && "dark"}>
                 {" "}
                 Learn more
               </p>
@@ -58,7 +58,7 @@ const Landing = () => {
           <br />
           <button
             id="likeBtn"
-            className={isDarkMode ? "dark" : ""}
+            className={isDarkMode && "dark"}
             onClick={() => setIsLiked(!isLiked)}
           >
             <FontAwesomeIcon

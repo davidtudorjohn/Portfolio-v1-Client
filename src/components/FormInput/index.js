@@ -4,10 +4,10 @@ import { useSelector } from "react-redux";
 const FormInput = props => {
   const isDarkMode = useSelector(state => state.isDarkMode);
   return (
-    <div className={isDarkMode ? "inputWrap dark" : "inputWrap"}>
+    <div className={`inputWrap ${isDarkMode && "dark"}`}>
       <input
         form={props.form}
-        className={isDarkMode ? "formInput dark" : "formInput"}
+        className={`formInput ${isDarkMode && "dark"}`}
         id={props.id}
         type={props.type}
         name={props.name}
@@ -18,7 +18,7 @@ const FormInput = props => {
       />
       <label
         htmlFor={props.htmlFor}
-        className={isDarkMode ? "inputLabel dark" : "inputLabel"}
+        className={`inputLabel ${isDarkMode && "dark"}`}
       >
         <span className="labelContent">{props.labelContent}</span>
       </label>

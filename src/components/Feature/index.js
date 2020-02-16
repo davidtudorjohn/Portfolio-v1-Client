@@ -5,11 +5,9 @@ const Feature = props => {
   const isDarkMode = useSelector(state => state.isDarkMode);
 
   return (
-    <div className={isDarkMode ? "featureWrap dark" : "featureWrap"}>
-      <h1 className={isDarkMode ? "feature dark" : "feature"}>
-        {props.feature}
-      </h1>
-      <h3 className={isDarkMode ? "tool dark" : "tool"}>with {props.tool}</h3>
+    <div className={`featureWrap ${isDarkMode && "dark"}`}>
+      <h1 className={`feature ${isDarkMode && "dark"}`}>{props.feature}</h1>
+      <h3 className={`tool ${isDarkMode && "dark"}`}>with {props.tool}</h3>
     </div>
   );
 };

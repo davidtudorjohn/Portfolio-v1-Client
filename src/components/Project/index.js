@@ -8,37 +8,24 @@ const Project = props => {
   const isDarkMode = useSelector(state => state.isDarkMode);
 
   return (
-    <div className={isDarkMode ? "projectCard dark" : "projectCard"}>
-      <p className={isDarkMode ? "num dark" : "num"}>
-        <FontAwesomeIcon
-          icon={faArrowRight}
-          className={isDarkMode ? "dark" : ""}
-        />{" "}
+    <div className={`projectCard ${isDarkMode && "dark"}`}>
+      <p className={`num ${isDarkMode && "dark"}`}>
+        <FontAwesomeIcon icon={faArrowRight} className={isDarkMode && "dark"} />{" "}
         {props.num}
       </p>
-      <h2 className={isDarkMode ? "projectTitle dark" : "projectTitle"}>
-        {props.title}
-      </h2>
+      <h2 className={`projectTitle ${isDarkMode && "dark"}`}>{props.title}</h2>
       <Techs names={props.techs} />
-      <p className={isDarkMode ? "description dark" : "description"}>
+      <p className={`description ${isDarkMode && "dark"}`}>
         {props.description}
       </p>
-      <a
-        className={isDarkMode ? "sourceBtn dark" : "sourceBtn"}
-        href={props.source}
-      >
+      <a className={`sourceBtn ${isDarkMode && "dark"}`} href={props.source}>
         Source Code
       </a>
       <br />
       <br />
       <br />
       <a
-        className={`
-          ${
-            props.disabled
-              ? `viewProjectBtn ${props.disabled}`
-              : `viewProjectBtn`
-          }${isDarkMode ? ` dark` : ``}`}
+        className={`viewProjectBtn ${props.disabled} ${isDarkMode && "dark"}`}
         href={props.viewAt}
       >
         {props.youAreHere ? "You Are Here" : "View Project"}

@@ -8,15 +8,12 @@ const Projects = () => {
   const isDarkMode = useSelector(state => state.isDarkMode);
 
   return (
-    <div id="projectsSection" className={isDarkMode ? "dark" : ""}>
-      <h2 id="projectsHeading" className={isDarkMode ? "dark" : ""}>
+    <div id="projectsSection" className={isDarkMode && "dark"}>
+      <h2 id="projectsHeading" className={isDarkMode && "dark"}>
         CHECK OUT SOME OF MY RECENT WORK <br />
-        <FontAwesomeIcon
-          icon={faArrowDown}
-          className={isDarkMode ? "dark" : ""}
-        />
+        <FontAwesomeIcon icon={faArrowDown} className={isDarkMode && "dark"} />
       </h2>
-      <div className={isDarkMode ? "projectsRow dark" : "projectsRow"}>
+      <div className={`projectsRow ${isDarkMode && "dark"}`}>
         <Project
           num="1"
           title="This Portfolio"
@@ -29,7 +26,8 @@ const Projects = () => {
             "Redux",
             "Express.js",
             "Node.js",
-            "MongoDB"
+            "MongoDB",
+            "Docker"
           ]}
           description="A software engineer's portfolio"
           source="https://github.com/david-t-john/portfolio-v1"
@@ -38,18 +36,20 @@ const Projects = () => {
         />
         <Project
           num="2"
-          title="Project Title"
+          title="Emporia"
           techs={[
             "React.js",
             "ES6",
             "HTML5",
             "CSS3",
+            "Sass",
             "Express.js",
+            "Node.js",
             "MongoDB",
-            "Node.js"
+            "Docker"
           ]}
-          description="A short description of the project"
-          source="https://github.com/david-t-john/portfolio-v1"
+          description="An ecommerce store for health products"
+          source="https://github.com/david-t-john/emporia"
         />
         <Project
           num="3"
@@ -60,7 +60,7 @@ const Projects = () => {
           viewAt="https://mowur.com"
         />
       </div>
-      <div className={isDarkMode ? "projectsRow dark" : "projectsRow"}>
+      {/* <div className={isDarkMode ? "projectsRow dark" : "projectsRow"}>
         <Project
           num="4"
           title="Project Title"
@@ -103,7 +103,7 @@ const Projects = () => {
           source="#"
           viewAt="#"
         />
-      </div>
+      </div> */}
     </div>
   );
 };

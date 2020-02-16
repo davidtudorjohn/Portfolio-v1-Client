@@ -12,7 +12,6 @@ import {
   faSun
 } from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import { Switch } from "@material-ui/core";
 import { useSelector, useDispatch } from "react-redux";
 import { logout, darkMode } from "../../actions";
 const Header = () => {
@@ -33,29 +32,24 @@ const Header = () => {
   };
   return (
     <>
-      {loggedOutMsg ? (
-        <Message
-          content="Log Out Successful"
-          class={isDarkMode ? "dark" : ""}
-        />
-      ) : (
-        ""
+      {loggedOutMsg && (
+        <Message content="Log Out Successful" class={isDarkMode && "dark"} />
       )}
-      <div id="header" className={isDarkMode ? "dark" : ""}>
-        <Logo position="left" class={isDarkMode ? "dark" : ""} />
+      <div id="header" className={isDarkMode && "dark"}>
+        <Logo position="left" class={isDarkMode && "dark"} />
         <nav>
           <ul id="navList">
             <NavItem
               href="https://github.com/david-t-john"
               icon={faGithub}
               content=" Github"
-              class={isDarkMode ? "navItem dark" : "navItem"}
+              class="navItem"
             />
             <NavItem
               href="https://linkedin.com/in/david-t-john"
               icon={faLinkedin}
               content=" LinkedIn"
-              class={isDarkMode ? "navItem dark" : "navItem"}
+              class="navItem"
             />
             {/* <NavItem
               href="#"
@@ -66,18 +60,18 @@ const Header = () => {
               href="mailto:davidjohn_atl@yahoo.com"
               icon={faEnvelopeSquare}
               content=" Get in Touch"
-              class={isDarkMode ? "navItem dark" : "navItem"}
+              class="navItem"
             />
             <NavItem
               href="tel:+1-678-699-4962"
               icon={faPhone}
               content=" (678)-699-4962"
-              class={isDarkMode ? "navItem dark" : "navItem"}
+              class="navItem"
             />
             {/* <Switch id="darkModeSwitch" onChange={() => dispatch(darkMode())} /> */}
             <div
               id="darkModeToggle"
-              className={isDarkMode ? "dark" : ""}
+              className={isDarkMode && "dark"}
               onClick={() => dispatch(darkMode())}
             >
               {isDarkMode ? (
@@ -87,14 +81,12 @@ const Header = () => {
               )}
               {/* {isDarkMode ? " Light Mode" : " Dark Mode"} */}
             </div>
-            {isLoggedIn ? (
+            {isLoggedIn && (
               <NavItem
                 content="Log Out"
                 action={handleLogOut}
-                class={isDarkMode ? "navItem dark" : "navItem"}
+                class="navItem"
               />
-            ) : (
-              ""
             )}
           </ul>
         </nav>
@@ -106,14 +98,14 @@ const Header = () => {
           <FontAwesomeIcon
             icon={faBars}
             id="faBars"
-            className={isDarkMode ? "dark" : ""}
+            className={isDarkMode && "dark"}
           />
         </button>
       </div>
 
       <div
         id="mobileMenuContent"
-        className={`${isDarkMode ? "dark" : ""} ${isOpen ? "open" : "closed"}`}
+        className={`${isDarkMode && "dark"} ${isOpen ? "open" : "closed"}`}
       >
         <nav>
           <ul id="mobileList">
@@ -121,34 +113,32 @@ const Header = () => {
               href="https://github.com/david-t-john"
               icon={faGithub}
               content=" Github"
-              class={isDarkMode ? "mobileItem dark" : "mobileItem"}
+              class="mobileItem"
             />
             <NavItem
               href="https://linkedin.com/in/david-t-john"
               icon={faLinkedin}
               content=" LinkedIn"
-              class={isDarkMode ? "mobileItem dark" : "mobileItem"}
+              class="mobileItem"
             />
             <NavItem
               href="mailto:davidjohn_atl@yahoo.com"
               icon={faEnvelopeSquare}
               content=" Get in Touch"
-              class={isDarkMode ? "mobileItem dark" : "mobileItem"}
+              class="mobileItem"
             />
             <NavItem
               href="tel:+1-678-699-4962"
               icon={faPhone}
               content=" (678)-699-4962"
-              class={isDarkMode ? "mobileItem dark" : "mobileItem"}
+              class="mobileItem"
             />
-            {isLoggedIn ? (
+            {isLoggedIn && (
               <NavItem
                 content="Log Out"
                 action={handleLogOut}
-                class={isDarkMode ? "mobileItem dark" : "mobileItem"}
+                class="mobileItem"
               />
-            ) : (
-              ""
             )}
           </ul>
         </nav>

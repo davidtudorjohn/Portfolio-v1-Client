@@ -118,9 +118,7 @@ const Form = () => {
   };
 
   if (loggedInMsg) {
-    return (
-      <Message content="Log in successful" class={isDarkMode ? "dark" : ""} />
-    );
+    return <Message content="Log in successful" class={isDarkMode && "dark"} />;
   }
 
   if (isLoggedIn) {
@@ -129,25 +127,21 @@ const Form = () => {
 
   return isLogIn ? (
     <div id="formWrap">
-      {registeredMsg ? (
+      {registeredMsg && (
         <Message
           content="Registration successful"
-          class={isDarkMode ? "dark" : ""}
+          class={isDarkMode && "dark"}
         />
-      ) : (
-        ""
       )}
-      {logInFailMsg ? (
+      {logInFailMsg && (
         <Message
           content="Invalid email or password"
-          class={isDarkMode ? "dark" : ""}
+          class={isDarkMode && "dark"}
         />
-      ) : (
-        ""
       )}
 
       <form id="logInForm" autoComplete="off" name="logInForm">
-        <h2 id="formTitle" className={isDarkMode ? "dark" : ""}>
+        <h2 id="formTitle" className={isDarkMode && "dark"}>
           Log In
         </h2>
         <br />
@@ -175,19 +169,19 @@ const Form = () => {
           form="logInForm"
           value="Log In"
           id="formSubmit"
-          className={isDarkMode ? "dark" : ""}
+          className={isDarkMode && "dark"}
           onClick={handleLogin}
         ></input>
 
         <PasswordVis
           action={handlePasswordVis}
           visibility={isPasswordVisible}
-          class={isDarkMode ? "dark" : ""}
+          class={isDarkMode && "dark"}
         />
         <br />
         <button
           id="loginOrRegister"
-          className={isDarkMode ? "dark" : ""}
+          className={isDarkMode && "dark"}
           onClick={handleFormToggle}
         >
           Or Register
@@ -196,16 +190,14 @@ const Form = () => {
     </div>
   ) : (
     <div id="formWrap">
-      {registerFailMsg ? (
+      {registerFailMsg && (
         <Message
           content="Registration was unsuccessful. Please try again."
-          class={isDarkMode ? "dark" : ""}
+          class={isDarkMode && "dark"}
         />
-      ) : (
-        ""
       )}
       <form id="registerForm" autoComplete="off" name="registerForm">
-        <h2 id="formTitle" className={isDarkMode ? "dark" : ""}>
+        <h2 id="formTitle" className={isDarkMode && "dark"}>
           Register
         </h2>
         <br />
@@ -238,7 +230,7 @@ const Form = () => {
           labelContent="Password"
         />
         <input
-          className={isDarkMode ? "dark" : ""}
+          className={isDarkMode && "dark"}
           type="submit"
           form="registerForm"
           value="Register"
@@ -249,12 +241,12 @@ const Form = () => {
         <PasswordVis
           action={handlePasswordVis}
           visibility={isPasswordVisible}
-          class={isDarkMode ? "dark" : ""}
+          class={isDarkMode && "dark"}
         />
         <br />
         <button
           id="loginOrRegister"
-          className={isDarkMode ? "dark" : ""}
+          className={isDarkMode && "dark"}
           onClick={handleFormToggle}
         >
           Or Log In

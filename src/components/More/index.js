@@ -8,20 +8,20 @@ import { useSelector } from "react-redux";
 const More = () => {
   const isDarkMode = useSelector(state => state.isDarkMode);
   return (
-    <div id="moreWrap" className={isDarkMode ? "dark" : ""}>
+    <div id="moreWrap" className={isDarkMode && "dark"}>
       <Link to="/">
-        <div id="backBtn" className={isDarkMode ? "dark" : ""}>
+        <div id="backBtn" className={isDarkMode && "dark"}>
           <FontAwesomeIcon
             icon={faArrowLeft}
             id="faArrowLeft"
-            className={isDarkMode ? "dark" : ""}
+            className={isDarkMode && "dark"}
           />
-          <p id="backBtnText" className={isDarkMode ? "dark" : ""}>
+          <p id="backBtnText" className={isDarkMode && "dark"}>
             Back
           </p>
         </div>
       </Link>
-      <div id="moreCol1" className={isDarkMode ? "dark" : ""}>
+      <div id="moreCol1" className={isDarkMode && "dark"}>
         <Feature feature="Routing" tool="React Router" />
         <Feature feature="AJAX" tool="Fetch and axios" />
         <Feature feature="REST API" tool="AJAX, Node.js and Express.js" />
@@ -32,7 +32,7 @@ const More = () => {
         <Feature feature="Backend Framework" tool="Express.js" />
         <Feature feature="Data Management" tool="MySQL, MongoDB and Mongoose" />
       </div>
-      <div id="moreCol2" className={isDarkMode ? "dark" : ""}>
+      <div id="moreCol2" className={isDarkMode && "dark"}>
         <Feature feature="CSS Preprocessing" tool="Sass" />
         <Feature feature="Package Management" tool="npm and yarn" />
         <Feature feature="Version Control" tool="Git and Github" />
