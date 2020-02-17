@@ -30,7 +30,7 @@ const More = () => {
           tool="Redux, Component State, and Context"
         />
         <Feature feature="Backend Framework" tool="Express.js" />
-        <Feature feature="Data Management" tool="MySQL, MongoDB and Mongoose" />
+        <Feature feature="Data Management" tool="MySQL and MongoDB" />
       </div>
       <div id="moreCol2" className={isDarkMode && "dark"}>
         <Feature feature="CSS Preprocessing" tool="Sass" />
