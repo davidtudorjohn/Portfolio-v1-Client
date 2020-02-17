@@ -77,7 +77,7 @@ const Form = () => {
       email: `${userEmail}`,
       password: `${userPassword}`
     };
-    await fetch("http://localhost:5000/api/users/register", {
+    await fetch(`${process.env.REACT_APP_API_URL}/api/users/register`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(user)
@@ -99,7 +99,7 @@ const Form = () => {
       email: `${userEmail}`,
       password: `${userPassword}`
     };
-    await fetch("http://localhost:5000/api/users/login", {
+    await fetch(`${process.env.REACT_APP_API_URL}/api/users/login`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(user)

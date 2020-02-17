@@ -63,50 +63,6 @@ const Projects = () => {
           viewAt="https://mowur.com"
         />
       </div>
-      {/* <div className={isDarkMode ? "projectsRow dark" : "projectsRow"}>
-        <Project
-          num="4"
-          title="Project Title"
-          techs={[
-            "React.js",
-            "ES6",
-            "HTML5",
-            "CSS3",
-            "Sass",
-            "Redux",
-            "Express.js",
-            "Node.js",
-            "MongoDB"
-          ]}
-          description="A short description of the project"
-          source="#"
-          viewAt="#"
-        />
-        <Project
-          num="5"
-          title="Project Title"
-          techs={[
-            "React.js",
-            "ES6",
-            "HTML5",
-            "CSS3",
-            "Express.js",
-            "MongoDB",
-            "Node.js"
-          ]}
-          description="A short description of the project"
-          source="#"
-          viewAt="#"
-        />
-        <Project
-          num="6"
-          title="Project Title"
-          techs={["ES6", "HTML5", "CSS3", "Wordpress", "Stripe"]}
-          description="A short description of the project"
-          source="#"
-          viewAt="#"
-        />
-      </div> */}
     </div>
   );
 };

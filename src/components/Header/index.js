@@ -68,7 +68,6 @@ const Header = () => {
               content=" (678)-699-4962"
               class="navItem"
             />
-            {/* <Switch id="darkModeSwitch" onChange={() => dispatch(darkMode())} /> */}
             <div
               id="darkModeToggle"
               className={isDarkMode && "dark"}
@@ -79,7 +78,6 @@ const Header = () => {
               ) : (
                 <FontAwesomeIcon icon={faMoon} id="faMoon" />
               )}
-              {/* {isDarkMode ? " Light Mode" : " Dark Mode"} */}
             </div>
             {isLoggedIn && (
               <NavItem

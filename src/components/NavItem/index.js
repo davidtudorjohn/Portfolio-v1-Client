@@ -7,11 +7,7 @@ const NavItem = props => {
   return (
     <li className={`${props.class} ${isDarkMode && "dark"}`}>
       <a href={props.href} onClick={props.action}>
-        {props.icon ? (
-          <FontAwesomeIcon id={props.icon} icon={props.icon} />
-        ) : (
-          ""
-        )}
+        {props.icon && <FontAwesomeIcon id={props.icon} icon={props.icon} />}
         {props.content}
       </a>
     </li>
