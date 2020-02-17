@@ -11,7 +11,10 @@ const Projects = () => {
     <div id="projectsSection" className={isDarkMode && "dark"}>
       <h2 id="projectsHeading" className={isDarkMode && "dark"}>
         CHECK OUT SOME OF MY RECENT WORK <br />
-        <FontAwesomeIcon icon={faArrowDown} className={isDarkMode && "dark"} />
+        <FontAwesomeIcon
+          icon={faArrowDown}
+          className={isDarkMode ? "dark" : ""}
+        />
       </h2>
       <div className={`projectsRow ${isDarkMode && "dark"}`}>
         <Project

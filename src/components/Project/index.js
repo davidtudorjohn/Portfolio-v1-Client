@@ -10,7 +10,10 @@ const Project = props => {
   return (
     <div className={`projectCard ${isDarkMode && "dark"}`}>
       <p className={`num ${isDarkMode && "dark"}`}>
-        <FontAwesomeIcon icon={faArrowRight} className={isDarkMode && "dark"} />{" "}
+        <FontAwesomeIcon
+          icon={faArrowRight}
+          className={isDarkMode ? "dark" : ""}
+        />{" "}
         {props.num}
       </p>
       <h2 className={`projectTitle ${isDarkMode && "dark"}`}>{props.title}</h2>

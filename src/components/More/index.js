@@ -14,7 +14,7 @@ const More = () => {
           <FontAwesomeIcon
             icon={faArrowLeft}
             id="faArrowLeft"
-            className={isDarkMode && "dark"}
+            className={isDarkMode ? "dark" : ""}
           />
           <p id="backBtnText" className={isDarkMode && "dark"}>
             Back

@@ -176,7 +176,7 @@ const Form = () => {
         <PasswordVis
           action={handlePasswordVis}
           visibility={isPasswordVisible}
-          class={isDarkMode && "dark"}
+          class={isDarkMode ? "dark" : ""}
         />
         <br />
         <button
@@ -241,7 +241,7 @@ const Form = () => {
         <PasswordVis
           action={handlePasswordVis}
           visibility={isPasswordVisible}
-          class={isDarkMode && "dark"}
+          class={isDarkMode ? "dark" : ""}
         />
         <br />
         <button

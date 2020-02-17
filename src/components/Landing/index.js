@@ -25,7 +25,7 @@ const Landing = () => {
               <FontAwesomeIcon
                 id="faArrowRight"
                 icon={faArrowRight}
-                className={isDarkMode && "dark"}
+                className={isDarkMode ? "dark" : ""}
               />
               <p id="learnMore" className={isDarkMode && "dark"}>
                 {" "}

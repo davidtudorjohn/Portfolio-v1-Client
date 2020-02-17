@@ -98,7 +98,7 @@ const Header = () => {
           <FontAwesomeIcon
             icon={faBars}
             id="faBars"
-            className={isDarkMode && "dark"}
+            className={isDarkMode ? "dark" : ""}
           />
         </button>
       </div>
