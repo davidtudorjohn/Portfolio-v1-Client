@@ -49,6 +49,7 @@ const Landing = () => {
               "MongoDB",
               "MySQL",
               "Docker",
+              "AWS",
               "Wordpress",
               "Stripe",
               "Git",

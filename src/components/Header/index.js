@@ -6,7 +6,6 @@ import "./header.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBars,
-  faPhone,
   faEnvelopeSquare,
   faMoon,
   faSun
@@ -28,6 +27,7 @@ const Header = () => {
   const [loggedOutMsg, setLoggedOutMsg] = useState(false);
   const handleLoggedOutMsg = () => {
     setLoggedOutMsg(true);
+    setIsOpen(false);
     setTimeout(() => setLoggedOutMsg(false), 3000);
   };
   return (
@@ -51,21 +51,10 @@ const Header = () => {
               content=" LinkedIn"
               class="navItem"
             />
-            {/* <NavItem
-              href="#"
-              content="Log In or Register"
-              class={isDarkMode ? "navItem dark" : "navItem"}
-            /> */}
             <NavItem
               href="mailto:davidjohn_atl@yahoo.com"
               icon={faEnvelopeSquare}
               content=" Get in Touch"
-              class="navItem"
-            />
-            <NavItem
-              href="tel:+1-678-699-4962"
-              icon={faPhone}
-              content=" (678)-699-4962"
               class="navItem"
             />
             <div
@@ -123,12 +112,6 @@ const Header = () => {
               href="mailto:davidjohn_atl@yahoo.com"
               icon={faEnvelopeSquare}
               content=" Get in Touch"
-              class="mobileItem"
-            />
-            <NavItem
-              href="tel:+1-678-699-4962"
-              icon={faPhone}
-              content=" (678)-699-4962"
               class="mobileItem"
             />
             {isLoggedIn && (

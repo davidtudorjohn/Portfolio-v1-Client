@@ -10,6 +10,7 @@ import Form from "./components/Form";
 import More from "./components/More";
 import { useSelector, useDispatch } from "react-redux";
 import { authenticated } from "./actions/index";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   const dispatch = useDispatch();
@@ -26,7 +27,8 @@ function App() {
   return isLoading ? (
     <h6 className={isDarkMode ? "loading dark" : "loading"}>Loading...</h6>
   ) : (
-    <Router onUpdate={() => window.scrollTo(0, 0)}>
+    <Router>
+      <ScrollToTop />
       <Switch>
         <div className={isDarkMode ? "App dark" : "App"}>
           <Header />

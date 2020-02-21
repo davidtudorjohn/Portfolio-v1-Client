@@ -37,7 +37,7 @@ const More = () => {
         <Feature feature="Package Management" tool="npm and yarn" />
         <Feature feature="Version Control" tool="Git and Github" />
         <Feature feature="Authentication" tool="bcryptjs and jsonwebtoken" />
-        <Feature feature="Deployment" tool="Docker and Webpack" />
+        <Feature feature="Deployment" tool="Docker, AWS and Webpack" />
         <Feature feature="Unit Testing" tool="Jest" />
         <br />
         <br />
