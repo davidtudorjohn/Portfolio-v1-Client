@@ -53,6 +53,7 @@ const Projects = () => {
           ]}
           description="An ecommerce store for health products"
           source="https://github.com/david-t-john/emporia"
+          viewAt="http://ec2-3-134-96-214.us-east-2.compute.amazonaws.com"
         />
         <Project
           num="3"

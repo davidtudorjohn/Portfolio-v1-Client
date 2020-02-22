@@ -42,7 +42,7 @@
   animation: slideIn 1.4s;
   display: flex;
   // margin-left: -4vw;
-  max-width: 300px;
+  max-width: 280px;
   border-radius: 100%;
   border: solid 5px $color1;
 }
@@ -61,7 +61,7 @@
   color: #ccc;
 }
 #col1Content {
-  padding: 0em 4em;
+  // padding: 0em 4em;
   justify-content: $cen;
   align-items: $cen;
   text-align: $cen;
@@ -76,4 +76,7 @@
   //     align-items: $cen;
   //     justify-content: $cen;
   //   }
+  #portrait {
+    max-width: 300px;
+  }
 }

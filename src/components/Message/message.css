@@ -10,6 +10,7 @@
   background-color: white;
   border: solid 2px slateblue;
   border-radius: 5px;
+  max-width: 94vw;
 }
 
 #message.dark {

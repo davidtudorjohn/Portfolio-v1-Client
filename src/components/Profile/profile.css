@@ -81,7 +81,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  max-width: 300px;
+  max-width: 280px;
   border-radius: 100%;
   border: solid 5px slateblue;
 }
@@ -107,7 +107,6 @@
 }
 
 #col1Content {
-  padding: 0em 4em;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -124,5 +123,11 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+@media screen and (min-width: 768px) {
+  #portrait {
+    max-width: 300px;
+  }
 }
 /*# sourceMappingURL=profile.css.map */
