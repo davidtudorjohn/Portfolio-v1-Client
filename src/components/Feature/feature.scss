@@ -1,7 +1,7 @@
 @import "../../main";
 .featureWrap {
   margin: 1em 0em;
-  padding: 2em;
+  padding: 2em 1em;
   border: solid 2px $color1;
   border-radius: 5px;
   &:hover {
@@ -12,6 +12,7 @@
   border: solid 2px $color1dark;
 }
 .feature {
+  font-size: 1.6em;
   color: $color1;
   letter-spacing: -0.05em;
 }
@@ -26,6 +27,9 @@
 }
 
 @media screen and (min-width: 768px) {
+  .feature {
+    font-size: 2em;
+  }
 }
 @media screen and (min-width: 1080px) {
 }

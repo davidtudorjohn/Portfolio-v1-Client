@@ -1,6 +1,6 @@
 .featureWrap {
   margin: 1em 0em;
-  padding: 2em;
+  padding: 2em 1em;
   border: solid 2px slateblue;
   border-radius: 5px;
 }
@@ -14,6 +14,7 @@
 }
 
 .feature {
+  font-size: 1.6em;
   color: slateblue;
   letter-spacing: -0.05em;
 }
@@ -28,5 +29,11 @@
 
 .tool.dark {
   color: white;
+}
+
+@media screen and (min-width: 768px) {
+  .feature {
+    font-size: 2em;
+  }
 }
 /*# sourceMappingURL=feature.css.map */
