@@ -51,6 +51,10 @@
   font-weight: 600;
   width: 100%;
 }
+.sourceBtn.disabled,
+.sourceBtn.dark.disabled {
+  color: white;
+}
 .sourceBtn.dark {
   border: $btnBorderDark;
   color: $color1dark;

@@ -57,6 +57,11 @@
   width: 100%;
 }
 
+.sourceBtn.disabled,
+.sourceBtn.dark.disabled {
+  color: white;
+}
+
 .sourceBtn.dark {
   border: solid 2px #63e029;
   color: #63e029;

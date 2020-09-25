@@ -30,7 +30,8 @@ const Projects = () => {
             "Express.js",
             "Node.js",
             "MongoDB",
-            "Docker"
+            "Docker",
+            "AWS"
           ]}
           description="A software engineer's portfolio"
           source="https://github.com/david-t-john/portfolio-v1"
@@ -49,7 +50,8 @@ const Projects = () => {
             "Express.js",
             "Node.js",
             "MongoDB",
-            "Docker"
+            "Docker",
+            "AWS"
           ]}
           description="An ecommerce store for health products"
           source="https://github.com/david-t-john/emporia"
@@ -59,8 +61,8 @@ const Projects = () => {
           num="3"
           title="MowUr"
           techs={["ES6", "HTML5", "CSS3", "Wordpress", "Stripe"]}
-          description="A marketplace web app for on-demand lawn mowing service"
-          source="https://github.com/david-t-john/portfolio-v1"
+          description="A (production) marketplace web app for on-demand lawn mowing service"
+          sourceUnavailable={true}
           viewAt="https://mowur.com"
         />
       </div>

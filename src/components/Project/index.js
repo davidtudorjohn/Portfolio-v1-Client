@@ -21,8 +21,12 @@ const Project = props => {
       <p className={`description ${isDarkMode && "dark"}`}>
         {props.description}
       </p>
-      <a className={`sourceBtn ${isDarkMode && "dark"}`} href={props.source}>
-        Source Code
+      <a
+        className={`sourceBtn ${isDarkMode &&
+          "dark"} ${props.sourceUnavailable && "disabled"}`}
+        href={props.source}
+      >
+        {props.sourceUnavailable ? "Unavailable" : "Source Code"}
       </a>
       <br />
       <br />
